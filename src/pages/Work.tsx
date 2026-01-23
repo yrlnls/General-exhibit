@@ -16,7 +16,6 @@ const Work = () => {
       <div className="pt-24 pb-12">
         <div className="container mx-auto px-6">
           {/* Featured Work Gallery */}
-          <h1 className="text-4xl font-bold mb-12 mt-12">Work</h1>
           <WorkGallery items={workItems} />
 
           {/* Events Section */}

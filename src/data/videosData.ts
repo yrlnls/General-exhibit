@@ -96,10 +96,10 @@ export const colorGradingComparisons: BeforeAfterComparison[] = [
   {
     id: 'grading',
     title: 'Video Color Grade',
-    beforeImage: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200&h=675&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=1200&h=675&fit=crop',
+    beforeImage: '/public/edit1.jpg?w=1200&h=675&fit=crop',
+    afterImage: '/public/edit2.jpg?w=1200&h=675&fit=crop',
     beforeLabel: 'Color Grade',
-    afterLabel: 'Low Profile',
+    afterLabel: 'Log Profile',
   },
 ];
 

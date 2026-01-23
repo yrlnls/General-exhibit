@@ -1,106 +1,97 @@
 import React, { useState, useRef } from 'react';
 
-interface BeforeAfterComparison {
+interface Comparison {
   id: string;
-  title: string;
   beforeImage: string;
   afterImage: string;
   beforeLabel: string;
   afterLabel: string;
 }
 
-const BeforeAfterSlider: React.FC<{ comparisons: BeforeAfterComparison[] }> = ({ comparisons }) => {
-  const [sliderPositions, setSliderPositions] = useState<{ [key: string]: number }>({});
-  const containerRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+const BeforeAfterSlider: React.FC<{ comparisons: Comparison[] }> = ({ comparisons }) => {
+  const [positions, setPositions] = useState<Record<string, number>>({});
+  const active = useRef<string | null>(null);
+  const containers = useRef<Record<string, HTMLDivElement | null>>({});
 
-  const handleMouseDown = (id: string) => (e: React.MouseEvent) => {
-    const container = containerRefs.current[id];
-    if (!container) return;
+  const setPosition = (id: string, clientX: number) => {
+    const el = containers.current[id];
+    if (!el) return;
 
-    const onMouseMove = (moveEvent: MouseEvent) => {
-      const rect = container.getBoundingClientRect();
-      const x = moveEvent.clientX - rect.left;
-      const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-      setSliderPositions((prev) => ({ ...prev, [id]: percentage }));
-    };
-
-    const onMouseUp = () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseup', onMouseUp);
-    };
-
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
+    const { left, width } = el.getBoundingClientRect();
+    const pct = ((clientX - left) / width) * 100;
+    setPositions(p => ({ ...p, [id]: Math.min(100, Math.max(0, pct)) }));
   };
 
   return (
-    <section className="py-16 space-y-12">
-      <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Color Grading..</h2>
-      </div>
+    <section className="space-y-20">
+      {comparisons.map(c => {
+        const pos = positions[c.id] ?? 50;
 
-      <div className="space-y-16">
-        {comparisons.map((comparison) => {
-          const position = sliderPositions[comparison.id] ?? 50;
+        return (
+          <div key={c.id}>
+            <div
+              ref={el => (containers.current[c.id] = el)}
+              className="relative w-full overflow-hidden select-none touch-none"
+              style={{ aspectRatio: '16 / 9' }}
+              onPointerMove={e => active.current && setPosition(active.current, e.clientX)}
+              onPointerUp={() => (active.current = null)}
+              onPointerLeave={() => (active.current = null)}
+            >
+              {/* AFTER image (base layer) */}
+              <img
+                src={c.afterImage}
+                alt={c.afterLabel}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
-          return (
-            <div key={comparison.id}>
-              <div
-                ref={(el) => {
-                  if (el) containerRefs.current[comparison.id] = el;
+              {/* BEFORE image (masked, same dimensions) */}
+              <img
+                src={c.beforeImage}
+                alt={c.beforeLabel}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  clipPath: `inset(0 ${100 - pos}% 0 0)`,
                 }}
-                className="relative w-full overflow-hidden rounded-lg cursor-col-resize bg-black"
-                onMouseDown={handleMouseDown(comparison.id)}
-                style={{ aspectRatio: '16 / 9' }}
+              />
+
+              {/* Divider */}
+              <div
+                className="absolute top-0 bottom-0"
+                style={{ left: `${pos}%` }}
               >
-                {/* After Image (Right) */}
-                <img
-                  src={comparison.afterImage}
-                  alt={comparison.afterLabel}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div className="absolute inset-y-0 w-[2px] bg-white/80" />
 
-                {/* Before Image (Left) with clipping */}
+                {/* Handle */}
                 <div
-                  className="absolute inset-0 overflow-hidden"
-                  style={{ width: `${position}%` }}
+                  onPointerDown={e => {
+                    active.current = c.id;
+                    e.currentTarget.setPointerCapture(e.pointerId);
+                    setPosition(c.id, e.clientX);
+                  }}
+                  className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2
+                             w-10 h-10 bg-white rounded-full shadow
+                             flex items-center justify-center cursor-ew-resize"
                 >
-                  <img
-                    src={comparison.beforeImage}
-                    alt={comparison.beforeLabel}
-                    className="w-full h-full object-cover"
-                    style={{ width: `calc(100% / ${position} * 100)` }}
-                  />
-                </div>
-
-                {/* Slider Line */}
-                <div
-                  className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
-                  style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
-                >
-                  {/* Center Circle Handle */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
-                    <div className="flex gap-1">
-                      <div className="w-1 h-4 bg-black" />
-                      <div className="w-1 h-4 bg-black" />
-                    </div>
-                  </div>
+                  <span className="text-black font-bold text-lg">{'<'}</span>
+                  <span className="text-black font-bold text-lg">{'>'}</span>
                 </div>
               </div>
 
-              {/* Labels Below Image */}
-              <div className="flex justify-between mt-4 px-4">
-                <span className="text-white text-sm font-semibold">
-                  {comparison.beforeLabel}
-                </span>
-                <span className="text-white text-sm font-semibold">
-                  {comparison.afterLabel}
-                </span>
-              </div>
+              {/* Labels */}
+              <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">
+                {c.beforeLabel}
+              </span>
+              <span className="absolute bottom-4 right-4 text-white text-sm font-semibold">
+                {c.afterLabel}
+              </span>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </section>
   );
 };
