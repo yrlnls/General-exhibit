@@ -1,5 +1,6 @@
-import productionSet from "@/assets/production-set.jpg";
-import interviewSetup from "@/assets/interview-setup.jpg";
+// Portrait images from public folder
+const edit1Image = "/edit1.jpg";
+const edit2Image = "/edit2.jpg";
 
 const achievements = [
   "Voices of Pemba documentary official selection for screening at the 26th Annual Zanzibar International Film Festival 2023! #ziff2023",
@@ -41,9 +42,9 @@ const AchievementsSection = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div className="aspect-[4/5]">
             <img
-              src={productionSet}
-              alt="Behind the scenes on production set"
-              className="w-full h-full object-cover rounded-lg"
+              src={edit1Image}
+              alt="Portrait photography"
+              className="w-full h-full object-cover rounded-lg shadow-2xl"
             />
           </div>
           
@@ -82,9 +83,9 @@ const AchievementsSection = () => {
           
           <div className="aspect-[4/5]">
             <img
-              src={interviewSetup}
-              alt="Professional interview setup"
-              className="w-full h-full object-cover rounded-lg"
+              src={edit2Image}
+              alt="Fashion portrait photography"
+              className="w-full h-full object-cover rounded-lg shadow-2xl"
             />
           </div>
         </div>
