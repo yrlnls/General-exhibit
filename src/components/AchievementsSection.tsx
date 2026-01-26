@@ -43,7 +43,7 @@ const AchievementsSection = () => {
           <div className="aspect-[4/5]">
             <img
               src={edit1Image}
-              alt="Portrait photography"
+              alt="Artistic portrait featuring elegant fashion styling with natural outdoor lighting"
               className="w-full h-full object-cover rounded-lg shadow-2xl"
             />
           </div>
@@ -84,7 +84,7 @@ const AchievementsSection = () => {
           <div className="aspect-[4/5]">
             <img
               src={edit2Image}
-              alt="Fashion portrait photography"
+              alt="Contemporary fashion portrait showcasing creative styling and composition"
               className="w-full h-full object-cover rounded-lg shadow-2xl"
             />
           </div>
