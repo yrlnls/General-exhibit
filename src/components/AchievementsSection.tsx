@@ -8,6 +8,36 @@ const achievements = [
   "Shortlisted multiple times for the MASK-Prize Awards for photography, with exhibitions at the Turner Contemporary in the UK, London.",
 ];
 
+const LaurelBranch = ({ className = "", mirror = false }: { className?: string; mirror?: boolean }) => {
+  // A single leaf path (almond shape pointing right)
+  const leafPath = "M0,0 C5,-6 15,-6 20,0 C15,6 5,6 0,0";
+  
+  return (
+    <svg 
+      viewBox="0 0 100 180" 
+      className={className} 
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ transform: mirror ? "scale(-1, 1)" : "" }}
+    >
+        {/* Main curved stem */}
+        <path d="M50 170 Q 10 90 50 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        
+        {/* Leaves - positioned along the curve, pointing up and out (left) */}
+        {/* Bottom to Top */}
+        <g transform="translate(48, 162) rotate(135) scale(0.9)"> <path d={leafPath} /> </g>
+        <g transform="translate(38, 145) rotate(140) scale(1.0)"> <path d={leafPath} /> </g>
+        <g transform="translate(30, 128) rotate(145) scale(1.1)"> <path d={leafPath} /> </g>
+        <g transform="translate(24, 110) rotate(150) scale(1.2)"> <path d={leafPath} /> </g>
+        <g transform="translate(20, 90) rotate(155) scale(1.3)"> <path d={leafPath} /> </g>
+        <g transform="translate(20, 70) rotate(165) scale(1.3)"> <path d={leafPath} /> </g>
+        <g transform="translate(24, 50) rotate(175) scale(1.2)"> <path d={leafPath} /> </g>
+        <g transform="translate(32, 32) rotate(190) scale(1.1)"> <path d={leafPath} /> </g>
+        <g transform="translate(45, 15) rotate(210) scale(1.0)"> <path d={leafPath} /> </g>
+    </svg>
+  );
+};
+
 const AchievementsSection = () => {
   return (
     <section id="achievements" className="py-20 md:py-28 bg-background">
@@ -16,18 +46,13 @@ const AchievementsSection = () => {
         
         <ul className="space-y-3 text-muted-foreground text-base md:text-lg leading-relaxed mb-16 max-w-5xl">
           {achievements.map((achievement, index) => (
-            <li key={index} className="flex">
-              <span className="mr-2">-</span>
+            <li key={index} className="flex items-start">
+              <span className="mr-2 text-foreground">-</span>
               <span>
-                {achievement.includes("26th Annual Zanzibar International Film Festival 2023") ? (
+                {index === 0 ? (
                   <>
                     Voices of Pemba documentary official selection for screening at the{" "}
                     <em className="text-foreground">26th Annual Zanzibar International Film Festival 2023! #ziff2023</em>
-                  </>
-                ) : achievement.includes("internship at Unilever") ? (
-                  <>
-                    Winner of the Entrepreneurial Prize at the MASK Awards 2019, securing an{" "}
-                    <span className="text-foreground">internship at Unilever's Heroes for Change</span>.
                   </>
                 ) : (
                   achievement
@@ -39,52 +64,40 @@ const AchievementsSection = () => {
 
         {/* Gallery */}
         <div className="grid md:grid-cols-3 gap-8 items-center">
-          <div className="aspect-[4/5]">
+          <div className="aspect-[4/5] relative overflow-hidden rounded-lg">
             <img
               src={productionSet}
               alt="Behind the scenes on production set"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover"
             />
           </div>
           
           {/* Film Festival Laurel */}
-          <div className="flex items-center justify-center">
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2">
-                <svg className="w-16 h-24 text-foreground" viewBox="0 0 40 60" fill="currentColor">
-                  <path d="M20 55 C15 50, 5 40, 5 25 C5 15, 10 5, 20 5 M20 5 C10 8, 5 18, 5 25" fill="none" stroke="currentColor" strokeWidth="2"/>
-                  <ellipse cx="8" cy="15" rx="3" ry="5" transform="rotate(-30 8 15)"/>
-                  <ellipse cx="6" cy="22" rx="3" ry="5" transform="rotate(-45 6 22)"/>
-                  <ellipse cx="6" cy="30" rx="3" ry="5" transform="rotate(-60 6 30)"/>
-                  <ellipse cx="8" cy="38" rx="3" ry="5" transform="rotate(-75 8 38)"/>
-                  <ellipse cx="12" cy="45" rx="3" ry="5" transform="rotate(-85 12 45)"/>
-                </svg>
+          <div className="flex flex-col items-center justify-center text-center py-8">
+             <div className="flex items-center justify-center -space-x-4 md:-space-x-2">
+                <LaurelBranch className="w-20 h-40 md:w-32 md:h-64 text-foreground" />
                 
-                <div className="text-center px-4">
-                  <p className="text-lg font-semibold text-foreground">ZIFF 2023</p>
-                  <p className="text-sm text-muted-foreground">The 26<sup>th</sup></p>
-                  <p className="text-sm text-muted-foreground">Anniversary Festival</p>
-                  <p className="text-lg font-bold text-foreground mt-2">OFFICIAL</p>
-                  <p className="text-lg font-bold text-foreground">SELECTION</p>
+                <div className="flex flex-col items-center px-2 z-10 pt-2 md:pt-4">
+                  <h3 className="text-xl md:text-3xl font-bold text-foreground tracking-wide mb-1 whitespace-nowrap">ZIFF 2023</h3>
+                  <div className="flex flex-col text-muted-foreground font-serif italic leading-tight">
+                    <span className="text-sm md:text-lg">The 26<sup>th</sup></span>
+                    <span className="text-sm md:text-lg">Anniversary Festival</span>
+                  </div>
+                  <div className="mt-2 md:mt-4 flex flex-col items-center leading-none">
+                    <span className="text-lg md:text-2xl font-black text-foreground tracking-widest uppercase">OFFICIAL</span>
+                    <span className="text-lg md:text-2xl font-black text-foreground tracking-widest uppercase">SELECTION</span>
+                  </div>
                 </div>
-                
-                <svg className="w-16 h-24 text-foreground" viewBox="0 0 40 60" fill="currentColor">
-                  <path d="M20 55 C25 50, 35 40, 35 25 C35 15, 30 5, 20 5 M20 5 C30 8, 35 18, 35 25" fill="none" stroke="currentColor" strokeWidth="2"/>
-                  <ellipse cx="32" cy="15" rx="3" ry="5" transform="rotate(30 32 15)"/>
-                  <ellipse cx="34" cy="22" rx="3" ry="5" transform="rotate(45 34 22)"/>
-                  <ellipse cx="34" cy="30" rx="3" ry="5" transform="rotate(60 34 30)"/>
-                  <ellipse cx="32" cy="38" rx="3" ry="5" transform="rotate(75 32 38)"/>
-                  <ellipse cx="28" cy="45" rx="3" ry="5" transform="rotate(85 28 45)"/>
-                </svg>
-              </div>
-            </div>
+
+                <LaurelBranch className="w-20 h-40 md:w-32 md:h-64 text-foreground" mirror={true} />
+             </div>
           </div>
           
-          <div className="aspect-[4/5]">
+          <div className="aspect-[4/5] relative overflow-hidden rounded-lg">
             <img
               src={interviewSetup}
               alt="Professional interview setup"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
