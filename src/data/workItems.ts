@@ -12,7 +12,7 @@ export const workItems: WorkItem[] = [
     {
         id: 1,
         title: 'MADAGASCAR',
-        image: '/public/madagascar.jpg?w=800&h=800&fit=crop',
+        image: '/madagascar.jpg?w=800&h=800&fit=crop',
         link: 'https://strategicagenda.com/seforall-arican-greentec-madagascar/',
         description: 'Sustainable Energy for All(SEforALL) in the rural community of Mahavelona',
         ctaText: 'Explore',
@@ -20,7 +20,7 @@ export const workItems: WorkItem[] = [
     {
         id: 2,
         title: 'ETHIOPIA',
-        image: '/public/ethiopia.jpg?w=800&h=800&fit=crop',
+        image: '/ethiopia.jpg?w=800&h=800&fit=crop',
         link: 'https://au.int/en/pressreleases/20240401/african-union-commission-meets-high-level-donor-mission-multi-hazard-early',
         description: 'UNDRR Donor Mission | AU Commission',
         ctaText: 'Explore',
@@ -28,7 +28,7 @@ export const workItems: WorkItem[] = [
     {
         id: 3,
         title: 'SEYCHELLES',
-        image: '/public/seychelles.jpg?w=800&h=800&fit=crop',
+        image: '/seychelles.jpg?w=800&h=800&fit=crop',
         link: 'https://www.youtube.com/watch?v=3VBPDhl8sWk',
         description: 'UNDRR, UNESCO, BMKG',
         ctaText: 'Explore',

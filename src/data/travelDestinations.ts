@@ -8,7 +8,7 @@ export interface TravelDestination {
 export interface TravelVideo {
   id: string;
   title: string;
-  videoId: string;
+  videoUrl: string;
   destination: string;
 }
 
@@ -67,20 +67,20 @@ export const travelVideos: TravelVideo[] = [
   {
     id: 'video-1',
     title: 'Johannesburg Travel Guide',
-    videoId: 'nPzrmQ2WeZ8&t=65s', 
+    videoUrl: 'https://www.youtube.com/embed/nPzrmQ2WeZ8',
     destination: 'Johannesburg',
   },
   {
     id: 'video-2',
     title: 'Seychelles',
-    videoId: '5b1Nic6BNVc', 
-    destination: 'Zanzibar',
+    videoUrl: 'https://www.youtube.com/embed/5b1Nic6BNVc',
+    destination: 'Seychelles',
   },
   {
     id: 'video-3',
-    title: 'South Sudan Journey',
-    videoId: 'https://vimeo.com/1087859974?fl=pl&fe=vl', 
-    destination: 'Juba',
+    title: 'Ambosseli',
+    videoUrl: 'https://player.vimeo.com/video/1087859974',
+    destination: 'Ambosseli',
   },
 ];
 

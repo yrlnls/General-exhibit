@@ -3,7 +3,7 @@ import React from 'react';
 interface TravelVideo {
   id: string;
   title: string;
-  videoId: string;
+  videoUrl: string;
   destination: string;
 }
 
@@ -16,7 +16,7 @@ const TravelVideosSection: React.FC<{ videos: TravelVideo[] }> = ({ videos }) =>
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${video.videoId}`}
+              src={video.videoUrl}
               title={video.title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
