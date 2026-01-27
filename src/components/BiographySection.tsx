@@ -6,8 +6,8 @@ const BiographySection = () => {
       <div className="container mx-auto px-6">
         {/* Biography */}
         <div className="max-w-4xl mb-20">
-          <h2 className="section-heading mb-8">Biography</h2>
-          <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+          <h2 className="section-heading">Biography</h2>
+          <div className="space-y-6 text-foreground text-base md:text-lg leading-relaxed">
             <p>
               Hello! I'm a self-taught artist & filmmaker based in Nairobi, Kenya and specializing in filmmaking, photography, and visual art.
             </p>
@@ -27,8 +27,8 @@ const BiographySection = () => {
         {/* My Work */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="section-heading mb-8">My Work</h2>
-            <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+            <h2 className="section-heading">My Work</h2>
+            <div className="space-y-6 text-foreground text-base md:text-lg leading-relaxed">
               <p>
                 With over <strong className="text-foreground">seven</strong> years of experience, I've contributed to various projects for renowned organizations such as UNDRR, UNDP, L'Oreal Paris, Deutsche Welle (DW) the 77 percent, AGRA, Microsoft ADC, Ulster University, Global Mathematica, Cordio East Africa, Techno Kenya, African Crossroads 2020, Lokhem Kids Entertainment, Nairobi Design Week, Mobile Art School in Kenya (MASK), and Ololo Farm Kenya among others.
               </p>
