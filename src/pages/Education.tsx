@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { educationItems } from "@/data/educationData";
 
 const Education = () => {
-  const educationImage = 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=600&fit=crop';
+  const educationImage = '/edu.png'
 
   return (
     <div className="min-h-screen bg-background flex flex-col">

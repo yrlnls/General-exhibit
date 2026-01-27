@@ -1,46 +1,66 @@
 import React from 'react';
 import { EducationItem } from '@/data/educationData';
 
-const EducationSection: React.FC<{ items: EducationItem[]; image: string }> = ({ items, image }) => {
+const EducationSection: React.FC<{
+  items: EducationItem[];
+  image: string;
+}> = ({ items, image }) => {
   return (
-    <section className="relative w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
-        {/* Image */}
-        <div className="order-2 md:order-1">
-          <div
-            className="w-full aspect-square rounded-lg overflow-hidden bg-red-600"
-            style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-          >
-            <img src={image} alt="Education" className="w-full h-full object-cover" />
+    <section className="w-full py-16 md:py-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+
+        {/* IMAGE */}
+        <div className="w-full">
+          <div className="aspect-square w-full overflow-hidden bg-red-600">
+            <img
+              src={image}
+              alt="Graduation"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
-        {/* Education Content */}
-        <div className="order-1 md:order-2">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Education</h2>
+        {/* CONTENT */}
+        <div className="w-full">
+          <h2 className="
+            text-4xl 
+            md:text-5xl 
+            font-extrabold 
+            tracking-tight 
+            text-white 
+            mb-8
+          ">
+            Education
+          </h2>
 
-          <div className="space-y-8">
+          <ul className="space-y-5">
             {items.map((item) => (
-              <div key={item.id}>
-                <p className="text-white/80 text-sm mb-2">
-                  {item.institution} {item.period}
-                </p>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
+              <li
+                key={item.id}
+                className="
+                  text-white/80 
+                  text-sm 
+                  md:text-base 
+                  font-normal 
+                  leading-relaxed
+                "
+              >
+                <span className="mr-2">-</span>
+                {item.institution}
+                <span className="mx-1">
+                  ({item.period});
+                </span>
+                <em className="text-white italic ml-1">
                   {item.qualification}
-                </h3>
-                {item.description && (
-                  <p className="text-white/60 text-sm italic">
-                    {item.description}
-                  </p>
-                )}
-              </div>
+                </em>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-b border-white/10 mt-16" />
+      {/* DIVIDER */}
+      <div className="border-b border-white/20 mt-16 md:mt-24" />
     </section>
   );
 };

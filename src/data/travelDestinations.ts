@@ -67,19 +67,19 @@ export const travelVideos: TravelVideo[] = [
   {
     id: 'video-1',
     title: 'Johannesburg Travel Guide',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual video ID
+    videoId: 'nPzrmQ2WeZ8&t=65s', 
     destination: 'Johannesburg',
   },
   {
     id: 'video-2',
-    title: 'Tanzania Adventure',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual video ID
+    title: 'Seychelles',
+    videoId: '5b1Nic6BNVc', 
     destination: 'Zanzibar',
   },
   {
     id: 'video-3',
     title: 'South Sudan Journey',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual video ID
+    videoId: 'https://vimeo.com/1087859974?fl=pl&fe=vl', 
     destination: 'Juba',
   },
 ];
