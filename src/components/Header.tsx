@@ -29,7 +29,6 @@ const Header = () => {
                 <a
                   href={item.href}
                   className={
-                    (item.label === "Work" && location.pathname === "/work") || 
                     (item.label === "Travel" && location.pathname === "/travel") ||
                     (item.label === "Education" && location.pathname === "/education") ||
                     (item.label === "Contact" && location.pathname === "/contact") ||
@@ -62,7 +61,6 @@ const Header = () => {
                   <a
                     href={item.href}
                     className={
-                      (item.label === "Work" && location.pathname === "/work") || 
                       (item.label === "Travel" && location.pathname === "/travel") ||
                       (item.label === "Education" && location.pathname === "/education") ||
                       (item.label === "Contact" && location.pathname === "/contact") ||
