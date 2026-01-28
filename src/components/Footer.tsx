@@ -29,10 +29,10 @@ const Footer = () => {
               © {currentYear} Jesse Otumba Otieno. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <a href="https://instagram.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/jessejesie/" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram size={40} />
               </a>
-              <a href="https://youtube.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@jesieotumba" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Youtube size={40} />
               </a>
               <a href="https://linkedin.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">

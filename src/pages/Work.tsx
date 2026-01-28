@@ -6,6 +6,7 @@ import DocumentariesSection from "@/components/WorkGallery/DocumentariesSection"
 import ArtSection from "@/components/WorkGallery/ArtSection";
 import BeforeAfterSlider from "@/components/WorkGallery/BeforeAfterSlider";
 import ClosingBannerSection from "@/components/WorkGallery/ClosingBannerSection";
+import Footer from "@/components/Footer";
 import { workItems } from "@/data/workItems";
 import { events, ngoItems, documentaries, artworks, colorGradingComparisons, closingBannerData } from "@/data/videosData";
 
@@ -49,6 +50,8 @@ const Work = () => {
           </div>
         </div>
       </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import BiographySection from "@/components/BiographySection";
 import AchievementsSection from "@/components/AchievementsSection";
 import ClientsSection from "@/components/ClientsSection";
 import QuoteSection from "@/components/QuoteSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <AchievementsSection />
       <ClientsSection />
       <QuoteSection />
+      <Footer />
     </div>
   );
 };
