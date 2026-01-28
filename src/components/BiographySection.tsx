@@ -16,7 +16,7 @@ const BiographySection = () => {
             </p>
             <p>
               I'm also part of{" "}
-              <a href="#" className="text-primary hover:underline">
+              <a href="https://strategicagenda.com/the-agenda/network-of-creatives/" className="text-primary hover:underline">
                 The Creative Network
               </a>{" "}
               at <strong className="text-foreground">Strategic Agenda UK</strong> where we tell compelling stories around the world.
