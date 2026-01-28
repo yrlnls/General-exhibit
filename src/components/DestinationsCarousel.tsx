@@ -36,7 +36,7 @@ const DestinationsCarousel: React.FC<{ destinations: TravelDestination[] }> = ({
   return (
     <section className="relative w-full">
       {/* Main Carousel - 3 Images Row */}
-      <div className="relative w-full bg-black">
+      <div className="relative w-full bg-background">
         <div className="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-8">
           {visibleDestinations.map((destination, index) => (
             <div key={`${currentIndex}-${index}`} className="relative overflow-hidden rounded-lg h-64 md:h-80 group">

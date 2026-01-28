@@ -25,7 +25,7 @@ const BiographySection = () => {
         </div>
 
         {/* My Work */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="section-heading">My Work</h2>
             <div className="space-y-6 text-foreground text-base md:text-lg leading-relaxed">

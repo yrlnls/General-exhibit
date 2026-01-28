@@ -1,21 +1,21 @@
 const clients = [
-  { name: "Spotify", logo: "spotify" },
-  { name: "Akuna Wallet", logo: "akuna" },
-  { name: "Batian Peak", logo: "batianpeak" },
-  { name: "Waco", logo: "waco" },
-  { name: "Rift Valley Institute", logo: "rift" },
-  { name: "Adidas", logo: "adidas" },
-  { name: "Cordio", logo: "cordio" },
-  { name: "Nairobi Design", logo: "nairobi" },
-  { name: "LG", logo: "lg" },
-  { name: "L'Oréal Paris", logo: "loreal" },
-  { name: "UNDRR", logo: "undrr" },
-  { name: "Wise Two", logo: "wise" },
-  { name: "Strategic Agenda", logo: "strategic" },
-  { name: "UNDP", logo: "undp" },
-  { name: "Mathematica", logo: "mathematica" },
-  { name: "Ulster University", logo: "ulster" },
-  { name: "Hyatt", logo: "hyatt" },
+  { name: "Spotify", logo: "Spotify_Full_Logo_RGB_White.png" },
+  { name: "Akuna Wallet", logo: "akuna.png" },
+  { name: "Batian Peak", logo: "batianpeak.png" },
+  { name: "Waco", logo: "wacologo1.jpg" },
+  { name: "Rift Valley Institute", logo: "riftvalley.png" },
+  { name: "Adidas", logo: "adidas-white-logo-hd-png-701751694777208ogwssxbgpj.png" },
+  { name: "Cordio", logo: "cordio.png" },
+  { name: "Nairobi Design", logo: "NAIROBI DESIGN_.png" },
+  { name: "LG", logo: "LG_logo_(2014).svg.png" },
+  { name: "L'Oréal Paris", logo: "l'orealparis.png" },
+  { name: "UNDRR", logo: "UNDRR_logo.png" },
+  { name: "Wise Two", logo: "wisetwo.png" },
+  { name: "Strategic Agenda", logo: "strategicagenda.png" },
+  { name: "UNDP", logo: "undp.png" },
+  { name: "Mathematica", logo: "mathematicawithtagline560.png" },
+  { name: "Ulster University", logo: "Ulster_University.png" },
+  { name: "Hyatt", logo: "Hyatt-Regency-Logo.png" },
 ];
 
 const ClientsSection = () => {
@@ -32,9 +32,11 @@ const ClientsSection = () => {
               key={client.name}
               className="text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
-              <span className="text-lg md:text-xl font-medium opacity-70 hover:opacity-100 transition-opacity">
-                {client.name}
-              </span>
+              <img
+                src={`/${client.logo}`}
+                alt={client.name}
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              />
             </div>
           ))}
         </div>

@@ -21,6 +21,7 @@ const QuoteSection = () => {
           variant="outline"
           size="lg"
           className="bg-foreground text-background hover:bg-foreground/90 border-none px-10 py-6 text-base font-medium"
+          onClick={() => window.open('https://www.the-star.co.ke/news/realtime/2020-12-11-the-young-can-lead-through-creativity', '_blank')}
         >
           Read More
         </Button>
