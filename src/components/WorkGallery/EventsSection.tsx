@@ -13,19 +13,21 @@ const EventsSection: React.FC<{ events: Event[] }> = ({ events }) => {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Events..</h2>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="flex flex-col gap-8 px-4 md:px-8 max-w-6xl mx-auto">
         {events.map((event) => (
-          <div key={event.id} className="group relative overflow-hidden rounded-lg">
-            <iframe
-              width="100%"
-              height="315"
-              src={`https://www.youtube.com/embed/${event.videoId}`}
-              title={event.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full aspect-video"
-            />
+          <div key={event.id} className="group relative overflow-hidden rounded-lg w-full">
+            <div className="aspect-video w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${event.videoId}`}
+                title={event.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
         ))}
       </div>

@@ -18,9 +18,16 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social */}
-          <div>
-            {/* <h4 className="text-foreground font-semibold text-sm tracking-wider mb-4">Follow</h4> */}
+          {/* Spacer to balance layout */}
+          <div className="hidden md:block"></div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-white/60 text-sm">
+              © {currentYear} Jesse Otumba Otieno. All rights reserved.
+            </p>
             <div className="flex gap-4">
               <a href="https://instagram.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram size={40} />
@@ -32,16 +39,6 @@ const Footer = () => {
                 <Linkedin size={40} />
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/60 text-sm">
-              © {currentYear} Jesse Otumba Otieno. All rights reserved.
-            </p>
-           
           </div>
         </div>
       </div>
