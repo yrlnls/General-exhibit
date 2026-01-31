@@ -28,7 +28,7 @@ const ContactForm = () => {
         <div className="flex flex-col items-center md:items-end justify-center text-center md:text-right">
           {/* <div className="mb-10"> */}
             <img
-              src="/contactlogo.png"
+              src="/Contactlogo.png"
               alt="Contact logo"
               className="w-48 h-48
                          md:w-64 md:h-64 object-contain mb-6"

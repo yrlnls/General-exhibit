@@ -8,15 +8,6 @@ const Footer = () => {
     <footer className="bg-background border-t border-white/10 py-8 md:py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
-          <div className="col-span-1 md:col-span-1">
-            <h3 className="text-foreground font-semibold text-sm tracking-wider mb-4">
-              JESSE OTUMBA OTIENO
-            </h3>
-            <p className="text-white/60 text-sm">
-              Exploring the world through work, art, and storytelling.
-            </p>
-          </div>
 
           {/* Spacer to balance layout */}
           <div className="hidden md:block"></div>

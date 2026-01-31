@@ -23,43 +23,43 @@ export const travelDestinations: TravelDestination[] = [
     id: 1,
     location: 'Antananarivo',
     country: 'MADAGASCAR',
-    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&h=600&fit=crop',
+    image: '/MADAGASCAR.jpg?w=1200&h=600&fit=crop',
   },
   {
     id: 2,
     location: 'Victoria',
     country: 'SEYCHELLES',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=600&fit=crop',
+    image:'/SEYCHELLES.jpg?w=1200&h=600&fit=crop',
   },
   {
     id: 3,
     location: 'Johannesburg',
     country: 'SOUTH AFRICA',
-    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&h=600&fit=crop',
+    image:'/SOUTHAFRICA.jpg?w=1200&h=600&fit=crop'
   },
   {
     id: 4,
     location: 'Addis Ababa',
     country: 'ETHIOPIA',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ba63d60?w=1200&h=600&fit=crop',
+    image:'/ETHIOPIA.jpg?w=1200&h=600&fit=crop'
   },
   {
     id: 5,
     location: 'Zanzibar',
     country: 'TANZANIA',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop',
+    image:'/ZANZIBAR.jpg?w=1200&h=600&fit=crop'
   },
   {
     id: 6,
     location: 'Juba',
     country: 'SOUTH SUDAN',
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&h=600&fit=crop',
+    image:'JUBA.jpg?w=1200&h=600&fit=crop'
   },
   {
     id: 7,
     location: 'Kampala',
     country: 'UGANDA',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop',
+    image:'/UGANDA.jpg?w=1200&h=600&fit=crop'
   },
 ];
 

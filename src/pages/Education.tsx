@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { educationItems } from "@/data/educationData";
 
 const Education = () => {
-  const educationImage = '/edu.png'
+  const educationImage = '/edu.jpg'
 
   return (
     <div className="min-h-screen bg-background flex flex-col">

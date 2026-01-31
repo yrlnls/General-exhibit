@@ -39,7 +39,7 @@ const BiographySection = () => {
           </div>
           <div className="relative">
             <img
-              src={filmmmakerPortrait}
+              src="/Photo+22-11-2022,+14+35+29.jpg"
               alt="Jesse Otumba Otieno with camera equipment"
               className="w-full h-auto rounded-lg shadow-2xl"
             />
