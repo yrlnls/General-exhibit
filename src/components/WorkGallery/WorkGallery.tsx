@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { WorkItem } from '@/data/workItems';
 
@@ -8,7 +9,12 @@ const WorkGallery: React.FC<{ items: WorkItem[] }> = ({ items }) => {
         {items.map(item => (
           <article
             key={item.id}
-            className="relative group overflow-hidden rounded-xl"
+            className="relative group overflow-hidden rounded-xl cursor-pointer"
+            onClick={() => {
+              if (item.link && item.link !== '#') {
+                window.location.href = item.link;
+              }
+            }}
           >
             {/* Image */}
             <div
@@ -44,3 +50,4 @@ const WorkGallery: React.FC<{ items: WorkItem[] }> = ({ items }) => {
 };
 
 export default WorkGallery;
+

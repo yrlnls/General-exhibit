@@ -1,8 +1,7 @@
 import Header from "@/components/Header";
 import WorkGallery from "@/components/WorkGallery/WorkGallery";
-import TravelVideosSection from "@/components/TravelVideosSection";
 import Footer from "@/components/Footer";
-import { travelDestinations, travelVideos } from "@/data/travelDestinations";
+import { travelDestinations } from "@/data/travelDestinations";
 import { WorkItem } from "@/data/workItems";
 
 const Travel = () => {
@@ -11,7 +10,7 @@ const Travel = () => {
     title: dest.country,
     description: dest.location,
     image: dest.image,
-    link: `#`,
+    link: `/travel/${dest.slug}`,
   }));
 
   return (
@@ -20,25 +19,16 @@ const Travel = () => {
       <div className="flex-1">
         <div className="pt-24 pb-12">
           <div className="container mx-auto px-6">
-            {/* Destinations Gallery */}
             <div className="mt-12">
               <WorkGallery items={workItems} />
-            </div>
-
-            {/* Travel Videos Section */}
-            <div className="mt-12">
-              <TravelVideosSection videos={travelVideos} />
-            </div>
-
-       
+            </div>           
           </div>
         </div>
       </div>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
 export default Travel;
+
