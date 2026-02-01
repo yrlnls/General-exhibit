@@ -11,6 +11,15 @@ export interface WorkItem {
 export const workItems: WorkItem[] = [
     {
         id: 1,
+        title: 'KENYA',
+        image: '/nairobi.jpg?w=800&h=800&fit=crop',
+        link: 'https://www.youtube.com/watch?v=EZqDX9VI3_I',
+        description: 'UNDRR',
+        badge: 'UNDRR',
+        ctaText: 'Explore',
+    },
+    {
+        id: 5,
         title: 'MADAGASCAR',
         image: '/madagascar.jpg?w=800&h=800&fit=crop',
         link: 'https://strategicagenda.com/seforall-arican-greentec-madagascar/',
@@ -40,23 +49,6 @@ export const workItems: WorkItem[] = [
         description: 'UNDRR',
     },
     {
-        id: 5,
-        title: 'KENYA',
-        image: '/public/nairobi.jpg?w=800&h=800&fit=crop',
-        link: 'https://www.youtube.com/watch?v=EZqDX9VI3_I',
-        description: 'UNDRR',
-        badge: 'UNDRR',
-        ctaText: 'Explore',
-    },
-    {
-        id: 6,
-        title: 'DOING ZERO',
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
-        link: 'https://www.nairobi.design/agency/doing-zero',
-        description: 'Nairobi Design | Design Manchester',
-        ctaText: 'Explore',
-    },
-    {
         id: 7,
         title: 'DW The 77 Percent',
         image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop',
@@ -78,6 +70,14 @@ export const workItems: WorkItem[] = [
         image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop',
         link: 'https://www.youtube.com/watch?v=eQOaVEXrm24',
         description: '#NDW2021',
+        ctaText: 'Explore',
+    },
+    {
+        id: 6,
+        title: 'DOING ZERO',
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+        link: 'https://www.nairobi.design/agency/doing-zero',
+        description: 'Nairobi Design | Design Manchester',
         ctaText: 'Explore',
     },
     {

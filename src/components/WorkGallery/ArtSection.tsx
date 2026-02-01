@@ -16,7 +16,7 @@ const ArtSection: React.FC<{ artworks: Artwork[] }> = ({ artworks }) => {
   };
 
   return (
-    <section className="py-16 space-y-8">
+    <section className="py-8 space-y-4">
       <div className="text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Art..</h2>
       </div>

@@ -24,7 +24,6 @@ const App = () => (
           <Route path="/travel" element={<Travel />} />
           <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

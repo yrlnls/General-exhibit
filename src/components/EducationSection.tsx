@@ -7,10 +7,10 @@ const EducationSection: React.FC<{
 }> = ({ items, image }) => {
   return (
     <section className="w-full py-16 md:py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-start">
 
-        <div className="w-full">
-          <div className="aspect-square w-full overflow-hidden bg-red-600">
+        <div className="w-full max-w-md mx-auto md:mx-0">
+          <div className="aspect-[4/3] w-full overflow-hidden bg-red-600 rounded-lg">
             <img
               src={image}
               alt="Graduation"
@@ -31,14 +31,14 @@ const EducationSection: React.FC<{
             Education
           </h2>
 
-          <ul className="space-y-5">
+          <ul className="space-y-6">
             {items.map((item) => (
               <li
                 key={item.id}
                 className="
                   text-white/80 
-                  text-sm 
-                  md:text-base 
+                  text-lg 
+                  md:text-xl 
                   font-normal 
                   leading-relaxed
                 "

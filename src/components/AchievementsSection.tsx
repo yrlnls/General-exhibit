@@ -28,7 +28,7 @@ const AchievementsSection = () => {
               />
             </figure>
 
-            <ul className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+            <ul className="space-y-4 text-foreground text-base md:text-lg leading-relaxed">
               {achievements.map((achievement, index) => (
                 <li key={index} className="flex items-start">
                   <span className="mr-3 text-foreground">–</span>

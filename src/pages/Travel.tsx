@@ -1,9 +1,8 @@
 import Header from "@/components/Header";
 import WorkGallery from "@/components/WorkGallery/WorkGallery";
 import TravelVideosSection from "@/components/TravelVideosSection";
-import TravelGallery from "@/components/TravelGallery";
 import Footer from "@/components/Footer";
-import { travelDestinations, travelVideos, galleryImages } from "@/data/travelDestinations";
+import { travelDestinations, travelVideos } from "@/data/travelDestinations";
 import { WorkItem } from "@/data/workItems";
 
 const Travel = () => {
@@ -31,10 +30,7 @@ const Travel = () => {
               <TravelVideosSection videos={travelVideos} />
             </div>
 
-            {/* Travel Gallery Section */}
-            <div className="mt-12">
-              <TravelGallery images={galleryImages} />
-            </div>
+       
           </div>
         </div>
       </div>

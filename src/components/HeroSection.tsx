@@ -13,7 +13,7 @@ const HeroSection = () => {
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-4 hero-text-shadow animate-fade-in">
           Art, rhythm, and real human stories
         </h1>
-        <p className="text-muted-foreground text-lg md:text-xl hero-text-shadow animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <p className="text-foreground text-xl md:text-2xl hero-text-shadow animate-fade-in" style={{ animationDelay: "0.2s" }}>
           See the future beyond.
         </p>
       </div>

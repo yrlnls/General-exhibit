@@ -23,21 +23,6 @@ export interface Artwork {
   platform?: 'youtube' | 'vimeo';
 }
 
-export interface BeforeAfterComparison {
-  id: string;
-  title: string;
-  beforeImage: string;
-  afterImage: string;
-  beforeLabel: string;
-  afterLabel: string;
-}
-
-export interface ClosingSection {
-  backgroundImage: string;
-  title: string;
-  subtitle?: string;
-}
-
 export const events: Event[] = [
   {
     id: 'wings-2023',
@@ -91,19 +76,3 @@ export const artworks: Artwork[] = [
   },
 ];
 
-export const colorGradingComparisons: BeforeAfterComparison[] = [
- 
-  {
-    id: 'grading',
-    title: 'Video Color Grade',
-    beforeImage: '/edit1.jpg?w=1200&h=675&fit=crop',
-    afterImage: '/edit2.jpg?w=1200&h=675&fit=crop',
-    beforeLabel: 'Color Grade',
-    afterLabel: 'Log Profile',
-  },
-];
-
-export const closingBannerData: ClosingSection = {
-  backgroundImage: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&h=900&fit=crop',
-  title: 'The Journey began here and still continues here..',
-};
