@@ -1,3 +1,4 @@
+
 import heroImage from "/HERO.jpg";
 import { useEffect } from "react";
 
@@ -33,3 +34,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

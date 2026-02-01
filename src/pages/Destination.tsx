@@ -30,7 +30,7 @@ const Destination = () => {
   const galleryImages = destination.photos.map((photo, index) => ({
     id: `photo-${index}`,
     src: photo,
-    alt: `${destination.country} - Photo ${index + 1}`,
+    alt: `${destination.country}`,
   }));
 
   return (
@@ -43,6 +43,9 @@ const Destination = () => {
           src={destination.image}
           alt={destination.country}
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
@@ -65,15 +68,11 @@ const Destination = () => {
 
       {/* Content */}
       <div className="flex-1">
-
-        {/* Videos Section */}
+        {/* Videos Section - Centered */}
         {destination.videos && destination.videos.length > 0 && (
-          <div className="py-8 bg-card/50">
-            <div className="container mx-auto px-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Videos
-              </h2>
-              <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="py-12 bg-card/50">
+            <div className="container mx-auto px-6 max-w-4xl">
+              <div className="space-y-8">
                 {destination.videos.map((video, index) => (
                   <div key={index} className="rounded-xl overflow-hidden bg-card">
                     <div className="aspect-video">
@@ -81,14 +80,10 @@ const Destination = () => {
                         src={video.videoUrl}
                         title={video.title}
                         className="w-full h-full"
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                       />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {video.title}
-                      </h3>
                     </div>
                   </div>
                 ))}
@@ -96,13 +91,11 @@ const Destination = () => {
             </div>
           </div>
         )}
-         {/* Photos Section */}
+
+        {/* Photos Section */}
         {galleryImages.length > 0 && (
-          <div className="py-8">
+          <div className="py-12">
             <div className="container mx-auto px-6">
-              <h2 className="text-3xl md:text-3xl font-bold text-foreground mb-6">
-                Photos
-              </h2>
               <TravelGallery images={galleryImages} />
             </div>
           </div>

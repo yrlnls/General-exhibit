@@ -21,7 +21,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 0,
     country: 'KENYA',
     location: 'Nairobi',
-    image: '/KEN10.jpg?w=1200&h=600&fit=crop',
+    image: '/KEN8.jpg?w=1200&h=600&fit=crop',
     slug: 'kenya',
     photos: [
       '/KEN1.jpg', '/KEN2.jpg', '/KEN3.jpg', '/KEN4.jpg', '/KEN5.jpg',
@@ -39,13 +39,13 @@ export const travelDestinations: TravelDestination[] = [
     id: 5,
     location: 'ZANZIBAR',
     country: 'TANZANIA',
-    image: '/ZANZIBAR.jpg?w=1200&h=600&fit=crop',
+    image: '/ZA1.jpg?w=1200&h=600&fit=crop',
     slug: 'zanzibar',
     photos: [
       '/ZA1.jpg', '/ZA2.jpg', '/ZA3.jpg', '/ZA4.jpg', '/ZA5.jpg',
       '/ZA6.jpg', '/ZA7.jpg', '/ZA8.jpg', '/ZA9.jpg', '/ZA10.jpg',
       '/ZA11.jpg', '/ZA12.jpg', '/ZA13.jpg', '/ZA14.jpg', '/ZA15.jpg',
-      '/ZA16.jpg', '/ZA17.jpg', '/ZA18.jpg', '/ZA19.jpg', '/ZA20.jpg',
+      '/ZA16.jpg', '/ZA17.jpg', '/ZA18.jpg', '/ZA20.jpg',
       '/ZA21.jpg', '/ZA22.jpg', '/ZA23.jpg', '/ZA24.jpg', '/ZA25.jpg',
     ],
     videos: [],
@@ -54,7 +54,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 1,
     country: 'MADAGASCAR',
     location: 'Antananarivo',
-    image: '/MADAGASCAR.jpg?w=1200&h=600&fit=crop',
+    image: '/MAD2.jpg?w=1200&h=600&fit=crop',
     slug: 'madagascar',
     photos: [
       '/MAD1.jpg', '/MAD2.jpg', '/MAD3.jpg', '/MAD4.jpg', '/MAD5.jpg',
@@ -91,9 +91,8 @@ export const travelDestinations: TravelDestination[] = [
     image: '/SOUTHAFRICA.jpg?w=1200&h=600&fit=crop',
     slug: 'south-africa',
     photos: [
-      '/SA1.jpg', '/SA2.JPG', '/SA3.jpg', '/SA4.jpg', '/SA5.jpg',
-      '/SA6.jpg', '/SA7.jpg', '/SA8.jpg', '/SA9.jpg', '/SA10.jpg',
-      '/SA11.jpg', '/SA12.jpg',
+       '/SA2.JPG', '/SA3.jpg', '/SA4.jpg', '/SA5.jpg',
+      '/SA6.jpg', '/SA7.jpg', '/SA8.jpg', '/SA9.jpg', '/SA10.jpg', '/SA12.jpg',
     ],
     videos: [
       { title: 'Johannesburg Travel Guide', videoUrl: 'https://www.youtube.com/embed/nPzrmQ2WeZ8' },
@@ -103,7 +102,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 4,
     location: 'Addis Ababa',
     country: 'ETHIOPIA',
-    image: '/ETH2.jpg?w=1200&h=600&fit=crop',
+    image: '/ETH1.jpg?w=1200&h=600&fit=crop',
     slug: 'ethiopia',
     photos: [
       '/ETH1.jpg', '/ETH2.jpg', '/ETH3.jpg',
@@ -114,11 +113,11 @@ export const travelDestinations: TravelDestination[] = [
     id: 6,
     location: 'Juba',
     country: 'SOUTH SUDAN',
-    image: 'JUBA.jpg?w=1200&h=600&fit=crop',
+    image: '/SS6.JPG?w=1200&h=600&fit=crop',
     slug: 'south-sudan',
     photos: [
       '/SS1.JPG', '/SS2.JPG', '/SS3.JPG', '/SS4.JPG', '/SS5.JPG',
-      '/SS6.JPG', '/SS7.JPG', '/SS8.JPG', '/SS9.JPG', '/SS10.jpg',
+      '/SS6.JPG', '/SS7.JPG', '/SS8.JPG', '/SS9.JPG'
     ],
     videos: [],
   },

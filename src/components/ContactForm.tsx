@@ -24,21 +24,18 @@ const ContactForm = () => {
     <section className="w-full py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        {/* LEFT */}
-        <div className="flex flex-col items-center md:items-end justify-center text-center md:text-right">
-          {/* <div className="mb-10"> */}
-            <img
-              src="/Contactlogo.png"
-              alt="Contact logo"
-              className="w-48 h-48
-                         md:w-64 md:h-64 object-contain mb-6"
-            />
-          {/* </div> */}
+{/* LEFT */}
+<div className="flex flex-col items-center justify-center text-center">
+  <img
+    src="/Contactlogo.png"
+    alt="Contact logo"
+    className="w-48 h-48 md:w-64 md:h-64 object-contain mb-6"
+  />
+  <h2 className="text-3xl font-semibold text-white">
+    Get In Touch
+  </h2>
+</div>
 
-          <h2 className="text-3xl font-semibold text-white">
-            Get In Touch
-          </h2>
-        </div>
 
         {/* RIGHT */}
         <div className="w-full max-w-md">

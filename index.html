@@ -6,13 +6,30 @@
     <title>Jesse Otumba- Jesse Otumba</title>
     <meta name="description" content="Jesse-Otumba-portfolio" />
     <meta name="author" content="Tillen" />
+    
+    <!-- Resource Hints for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://player.vimeo.com" />
 
     <meta property="og:title" content="Jesse-Otumba-portfolio" />
     <meta property="og:description" content="Jesse-Otumba-portfolio" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="" />
 
-  
+    <!-- Prevent layout shift by reserving space for images -->
+    <style>
+      img {
+        display: block;
+      }
+      .aspect-video {
+        aspect-ratio: 16 / 9;
+      }
+      .aspect-square {
+        aspect-ratio: 1 / 1;
+      }
+    </style>
   </head>
 
   <body>
@@ -20,3 +37,4 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
