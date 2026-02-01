@@ -26,40 +26,46 @@ const ClientsSection = () => {
           Clients
         </h2>
 
-        <div className="
-          grid
-          grid-cols-2
-          sm:grid-cols-3
-          md:grid-cols-5
-          lg:grid-cols-6
-          gap-x-4
-          gap-y-8
-          md:gap-x-6
-          md:gap-y-10
-          place-items-center
-          max-w-6xl
-          mx-auto
-        ">
+        <div
+          className="
+            grid
+            grid-cols-2
+            sm:grid-cols-3
+            md:grid-cols-4
+            lg:grid-cols-9
+            gap-x-8
+            gap-y-12
+            place-items-center
+            max-w-7xl
+            mx-auto
+          "
+        >
           {clients.map((client) => (
             <div
               key={client.name}
               className="
+                w-full
+                h-28
+                md:h-32
+                lg:h-36
                 flex
                 items-center
                 justify-center
-                w-36
-                h-20
-                sm:w-32
-                sm:h-16
-                md:w-32
-                md:h-16
               "
             >
               <img
                 src={`/${client.logo}`}
                 alt={client.name}
                 loading="lazy"
-                className="max-w-full max-h-full object-contain transition-transform duration-200 hover:scale-[1.05]"
+                className="
+                  w-full
+                  h-full
+                  object-contain
+                  scale-110
+                  transition-transform
+                  duration-200
+                  hover:scale-125
+                "
               />
             </div>
           ))}
@@ -68,5 +74,7 @@ const ClientsSection = () => {
     </section>
   );
 };
+
+
 
 export default ClientsSection;

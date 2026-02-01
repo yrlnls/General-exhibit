@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-1">
             <p className="text-white/60 text-sm">
               © {currentYear} Jesse Otumba Otieno. All rights reserved.
             </p>
@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="https://www.youtube.com/@jesieotumba" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Youtube size={40} />
               </a>
-              <a href="https://linkedin.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/jesse-otumba-a70606173/" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={40} />
               </a>
             </div>

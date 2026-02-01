@@ -4,8 +4,8 @@ import EventsSection from "@/components/WorkGallery/EventsSection";
 import NGOWorldSection from "@/components/WorkGallery/NGOWorldSection";
 import DocumentariesSection from "@/components/WorkGallery/DocumentariesSection";
 import ArtSection from "@/components/WorkGallery/ArtSection";
-import BeforeAfterSlider from "@/components/WorkGallery/BeforeAfterSlider";
-import ClosingBannerSection from "@/components/WorkGallery/ClosingBannerSection";
+// import BeforeAfterSlider from "@/components/WorkGallery/BeforeAfterSlider";
+// import ClosingBannerSection from "@/components/WorkGallery/ClosingBannerSection";
 import Footer from "@/components/Footer";
 import { workItems } from "@/data/workItems";
 import { events, ngoItems, documentaries, artworks, colorGradingComparisons, closingBannerData } from "@/data/videosData";
@@ -40,17 +40,15 @@ const Work = () => {
           </div>
 
           {/* Color Grading Section */}
-          <div className="mt-20 border-t border-white/10 pt-12">
+          {/* <div className="mt-20 border-t border-white/10 pt-12">
             <BeforeAfterSlider comparisons={colorGradingComparisons} />
-          </div>
-
+          </div> */}
           {/* Closing Banner Section */}
-          <div className="mt-20">
+          {/* <div className="mt-20">
             <ClosingBannerSection data={closingBannerData} />
-          </div>
+          </div> */}
         </div>
       </div>
-      {/* Footer */}
       <Footer />
     </div>
   );

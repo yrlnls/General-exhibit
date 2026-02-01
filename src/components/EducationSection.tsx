@@ -9,7 +9,6 @@ const EducationSection: React.FC<{
     <section className="w-full py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
 
-        {/* IMAGE */}
         <div className="w-full">
           <div className="aspect-square w-full overflow-hidden bg-red-600">
             <img
@@ -20,7 +19,6 @@ const EducationSection: React.FC<{
           </div>
         </div>
 
-        {/* CONTENT */}
         <div className="w-full">
           <h2 className="
             text-4xl 
@@ -59,7 +57,6 @@ const EducationSection: React.FC<{
         </div>
       </div>
 
-      {/* DIVIDER */}
       <div className="border-b border-white/20 mt-16 md:mt-24" />
     </section>
   );
