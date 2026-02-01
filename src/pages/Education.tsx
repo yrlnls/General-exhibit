@@ -12,15 +12,14 @@ const Education = () => {
       <div className="flex-1">
         <div className="pt-24 pb-12">
           <div className="container mx-auto px-6">
-            {/* Education Section */}
             <div className="mt-12">
+
               <EducationSection items={educationItems} image={educationImage} />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
