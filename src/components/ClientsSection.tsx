@@ -12,7 +12,6 @@ const clients = [
   { name: "Batian Peak", logo: "BATIAN.png" },
   { name: "Nairobi Design", logo: "NAIROBIDESIGN.png" },
   { name: "Cordio", logo: "CORDIO.png" },
-  { name: "Waco", logo: "WACO.png" },
   { name: "Strategic Agenda", logo: "STRATEGICAGENDA.png" },
   { name: "Mathematica", logo: "mathematicawithtagline560.png" },
   { name: "Rift Valley Institute", logo: "RVI-logo-01.png" },
@@ -22,19 +21,16 @@ const ClientsSection = () => {
   return (
     <section id="clients" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="text-center text-xs tracking-[0.35em] text-muted-foreground uppercase mb-10 md:mb-12">
-          Clients
-        </h2>
-
+        <h2 className="section-heading mb-12 text-center">CLIENTS</h2>
         <div
           className="
             grid
             grid-cols-2
             sm:grid-cols-3
             md:grid-cols-4
-            lg:grid-cols-9
-            gap-x-8
-            gap-y-12
+            lg:grid-cols-8
+            gap-x-10
+            gap-y-14
             place-items-center
             max-w-7xl
             mx-auto
@@ -45,12 +41,13 @@ const ClientsSection = () => {
               key={client.name}
               className="
                 w-full
-                h-28
-                md:h-32
-                lg:h-36
+                h-32
+                md:h-36
+                lg:h-40
                 flex
                 items-center
                 justify-center
+                px-2
               "
             >
               <img
@@ -58,13 +55,13 @@ const ClientsSection = () => {
                 alt={client.name}
                 loading="lazy"
                 className="
-                  w-full
-                  h-full
+                  max-w-full
+                  max-h-full
                   object-contain
-                  scale-110
+                  scale-125
                   transition-transform
                   duration-200
-                  hover:scale-125
+                  hover:scale-140
                 "
               />
             </div>
@@ -75,6 +72,7 @@ const ClientsSection = () => {
   );
 };
 
-
-
 export default ClientsSection;
+
+
+

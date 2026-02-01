@@ -9,8 +9,8 @@ import { WorkItem } from "@/data/workItems";
 const Travel = () => {
   const workItems: WorkItem[] = travelDestinations.map(dest => ({
     id: dest.id,
-    title: dest.location,
-    description: dest.country,
+    title: dest.country,
+    description: dest.location,
     image: dest.image,
     link: `#`,
   }));

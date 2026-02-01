@@ -1,7 +1,7 @@
 export interface TravelDestination {
   id: number;
-  location: string;
   country: string;
+  location: string;
   image: string;
 }
 
@@ -21,8 +21,8 @@ export interface GalleryImage {
 export const travelDestinations: TravelDestination[] = [
   {
     id: 1,
-    location: 'Antananarivo',
     country: 'MADAGASCAR',
+    location: 'Antananarivo',
     image: '/MADAGASCAR.jpg?w=1200&h=600&fit=crop',
   },
   {
@@ -45,7 +45,7 @@ export const travelDestinations: TravelDestination[] = [
   },
   {
     id: 5,
-    location: 'Zanzibar',
+    location: 'ZANZIBAR',
     country: 'TANZANIA',
     image:'/ZANZIBAR.jpg?w=1200&h=600&fit=crop'
   },
