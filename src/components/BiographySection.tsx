@@ -22,6 +22,8 @@ const BiographySection = () => {
               I'm also part of{" "}
               <a
                 href="https://strategicagenda.com/the-agenda/network-of-creatives/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
                 The Creative Network
