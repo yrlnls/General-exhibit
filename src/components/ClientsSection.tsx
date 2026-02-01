@@ -19,7 +19,7 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section id="clients" className="py-16 md:py-24 bg-background">
+    <section id="clients" className="py-10">
       <div className="container mx-auto px-6">
         <h2 className="section-heading mb-12 text-center">CLIENTS</h2>
         <div

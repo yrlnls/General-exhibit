@@ -10,10 +10,18 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <BiographySection />
-      <AchievementsSection />
-      <ClientsSection />
-      <Footer />
+      <div
+        className="min-h-screen bg-cover bg-fixed bg-center bg-no-repeat relative"
+        style={{ backgroundImage: `url(/background.jpg)` }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10">
+          <BiographySection />
+          <AchievementsSection />
+          <ClientsSection />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 const BiographySection = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-10">
       <div className="container mx-auto px-6">
 
         {/* ================= BIOGRAPHY ================= */}

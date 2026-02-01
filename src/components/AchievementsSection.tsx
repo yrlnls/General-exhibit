@@ -9,7 +9,7 @@ const AchievementsSection = () => {
   return (
     <section
       id="achievements"
-      className="pt-12 pb-20 bg-background"
+      className="pt-6 pb-10"
     >
       <div className="container mx-auto px-6">
 
