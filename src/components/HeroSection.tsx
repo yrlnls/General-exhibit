@@ -1,16 +1,27 @@
 import heroImage from "/HERO.jpg";
+import { useEffect } from "react";
 
 const HeroSection = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      document.documentElement.style.setProperty('--hero-scroll', scrollY.toString());
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center">
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-parallax-bg"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       <div className="hero-overlay" />
       
-      <div className="relative z-10 text-center px-6">
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-4 hero-text-shadow animate-fade-in">
+      <div className="relative z-10 text-center px-6 hero-parallax-content">
+        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4 hero-text-shadow animate-fade-in">
           Art, rhythm, and real human stories
         </h1>
         <p className="text-foreground text-xl md:text-2xl hero-text-shadow animate-fade-in" style={{ animationDelay: "0.2s" }}>
