@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"News Gothic Regular"', 'sans-serif'],
-        body: ['"News Gothic Regular"', 'sans-serif'],
+        heading: ['"Century Gothic Regular"', 'sans-serif'],
+        body: ['"Century Gothic Regular"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

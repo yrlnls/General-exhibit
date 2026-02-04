@@ -36,8 +36,8 @@
 
     --radius: 0.5rem;
 
-    --font-heading: "News Gothic Regular", "News Gothic Regular", sans-serif;
-    --font-body: "News Gothic Regular", "News Gothic Regular", sans-serif;
+    --font-heading: "Century Gothic Regular", "Century Gothic Regular", sans-serif;
+    --font-body: "Century Gothic Regular", "Century Gothic Regular", sans-serif;
 
     --sidebar-background: 222 30% 10%;
     --sidebar-foreground: 0 0% 98%;
@@ -96,7 +96,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "News Gothic Regular", "News Gothic Regular", sans-serif;
+    font-family: "Century Gothic Regular", "Century Gothic Regular", sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
