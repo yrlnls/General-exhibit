@@ -2,13 +2,11 @@ import React from 'react';
 import { WorkItem } from '@/data/workItems';
 
 const WorkGallery: React.FC<{ items: WorkItem[] }> = ({ items }) => {
-  const columns = Math.ceil(items.length / 2); // ensures exactly 2 rows
 
   return (
     <section className="w-full py-16">
-      <div
-        className={`grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns} px-8 md:px-16 max-w-8xl mx-auto`}
-      >
+      <div className="grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto">
+
         {items.map((item, index) => (
           <article
             key={item.id}

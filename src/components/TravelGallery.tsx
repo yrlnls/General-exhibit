@@ -14,7 +14,7 @@ const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
   return (
     <>
       <section className="relative w-full bg-background py-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 p-4 md:p-8">
+        <div className="grid grid-cols-2 gap-3 md:gap-4 p-4 md:p-8">
           {images.map((image, index) => (
             <button
               key={image.id}

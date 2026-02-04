@@ -21,7 +21,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 0,
     country: 'KENYA',
     location: 'Nairobi',
-    image: '/KEN8.jpg?w=1200&h=600&fit=crop',
+    image: '/Kenya-thumb.JPG?w=1200&h=600&fit=crop',
     slug: 'kenya',
     photos: [
       '/KEN1.jpg', '/KEN2.jpg', '/KEN3.jpg', '/KEN4.jpg', '/KEN5.jpg',
@@ -42,7 +42,7 @@ export const travelDestinations: TravelDestination[] = [
     image: '/ZA1.jpg?w=1200&h=600&fit=crop',
     slug: 'zanzibar',
     photos: [
-      '/ZA1.jpg', '/ZA2.jpg', '/ZA3.jpg', '/ZA4.jpg', '/ZA5.jpg',
+       '/ZA2.jpg', '/ZA3.jpg', '/ZA4.jpg', '/ZA5.jpg',
       '/ZA6.jpg', '/ZA7.jpg', '/ZA8.jpg', '/ZA9.jpg', '/ZA10.jpg',
       '/ZA11.jpg', '/ZA12.jpg', '/ZA13.jpg', '/ZA14.jpg', '/ZA15.jpg',
       '/ZA16.jpg', '/ZA17.jpg', '/ZA18.jpg', '/ZA20.jpg',
@@ -54,7 +54,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 1,
     country: 'MADAGASCAR',
     location: 'Antananarivo',
-    image: '/MAD2.jpg?w=1200&h=600&fit=crop',
+    image: '/MAD39.jpg?w=1200&h=600&fit=crop',
     slug: 'madagascar',
     photos: [
       '/MAD1.jpg', '/MAD2.jpg', '/MAD3.jpg', '/MAD4.jpg', '/MAD5.jpg',
@@ -73,7 +73,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 2,
     location: 'Victoria',
     country: 'SEYCHELLES',
-    image: '/SEYCHELLES.jpg?w=1200&h=600&fit=crop',
+    image: '/SEY13.jpg?w=1200&h=600&fit=crop',
     slug: 'seychelles',
     photos: [
       '/SEY1.jpg', '/SEY2.jpg', '/SEY3.jpg', '/SEY4.jpg', '/SEY5.jpg',
@@ -102,7 +102,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 4,
     location: 'Addis Ababa',
     country: 'ETHIOPIA',
-    image: '/ETH1.jpg?w=1200&h=600&fit=crop',
+    image: '/ETH00.jpg?w=1200&h=600&fit=crop',
     slug: 'ethiopia',
     photos: [
       '/ETH1.jpg', '/ETH2.jpg', '/ETH3.jpg',
@@ -113,7 +113,7 @@ export const travelDestinations: TravelDestination[] = [
     id: 6,
     location: 'Juba',
     country: 'SOUTH SUDAN',
-    image: '/SS6.JPG?w=1200&h=600&fit=crop',
+    image: '/SS5.JPG?w=1200&h=600&fit=crop',
     slug: 'south-sudan',
     photos: [
       '/SS1.JPG', '/SS2.JPG', '/SS3.JPG', '/SS4.JPG', '/SS5.JPG',
