@@ -4,12 +4,6 @@ export interface Event {
   videoId: string;
 }
 
-export interface NGOItem {
-  id: string;
-  title: string;
-  videoId: string;
-}
-
 export interface Documentary {
   id: string;
   title: string;
@@ -28,14 +22,6 @@ export const events: Event[] = [
     id: 'wings-2023',
     title: 'Wings Forum 2023 Highlights',
     videoId: 'qigyUW4zulY', 
-  },
-];
-
-export const ngoItems: NGOItem[] = [
-  {
-    id: 'seychelles-tsunami',
-    title: 'How are the Seychelles preparing for tsunami risk? UNDRR',
-    videoId: '3VBPDhl8sWk', 
   },
 ];
 
@@ -75,4 +61,3 @@ export const artworks: Artwork[] = [
     videoId: 'm49qOy-_Iko',
   },
 ];
-

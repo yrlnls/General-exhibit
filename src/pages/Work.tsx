@@ -5,8 +5,8 @@ import NGOWorldSection from "@/components/WorkGallery/NGOWorldSection";
 import DocumentariesSection from "@/components/WorkGallery/DocumentariesSection";
 import ArtSection from "@/components/WorkGallery/ArtSection";
 import Footer from "@/components/Footer";
-import { workItems } from "@/data/workItems";
-import { events, ngoItems, documentaries, artworks } from "@/data/videosData";
+import { ngoWorldItems, workItems } from "@/data/workItems";
+import { events, documentaries, artworks } from "@/data/videosData";
 
 const Work = () => {
   return (
@@ -14,15 +14,9 @@ const Work = () => {
       <Header />
       <div className="pt-24 pb-12">
         <div className="container mx-auto px-6">
-          {/* Featured Work Gallery */}
-          <WorkGallery items={workItems} />
-
-          {/* Events & NGO World Section - Side by Side */}
-          <div className="mt-20 border-t border-white/10 pt-12">
-            <div className="grid gap-10 lg:grid-cols-2">
-              <EventsSection events={events} />
-              <NGOWorldSection items={ngoItems} />
-            </div>
+          {/* Events Section */}
+          <div className="mt-4">
+            <EventsSection events={events} />
           </div>
 
           {/* Documentaries Section */}
@@ -33,6 +27,16 @@ const Work = () => {
           {/* Art Section */}
           <div className="mt-10 border-t border-white/10 pt-10">
             <ArtSection artworks={artworks} />
+          </div>
+
+          {/* NGO World Section */}
+          <div className="mt-10 border-t border-white/10 pt-10">
+            <NGOWorldSection items={ngoWorldItems} />
+          </div>
+
+          {/* Projects Section */}
+          <div className="mt-10 border-t border-white/10 pt-10">
+            <WorkGallery items={workItems} />
           </div>
 
         </div>
