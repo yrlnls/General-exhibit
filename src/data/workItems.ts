@@ -47,14 +47,6 @@ export const ngoWorldItems: WorkItem[] = [
 
 export const workItems: WorkItem[] = [
     {
-        id: 7,
-        title: 'DW The 77 Percent',
-        image: '/DW.jpeg?w=800&h=800&fit=crop',
-        link: 'https://www.dw.com/en/the-rise-of-roller-skates-in-nairobi/video-62612611#:~:text=The%20streets%20of%20Nairobi%20aren,found%20their%20own%20skating%20oasis.',
-        description: 'The rise of roller skates in Nairobi',
-    },
- 
-    {
         id: 9,
         title:'NAIROBI DESIGN',
         image: '/NDW.jpg?w=800&h=800&fit=crop',
@@ -69,10 +61,17 @@ export const workItems: WorkItem[] = [
         description: 'Nairobi Design | Design Manchester',
     },
     {
-        id: 10,
-        title: 'OLOLO FARM',
-        image: '/Ololo Farm Logo.png?w=800&h=800&fit=crop',
-        link: 'https://www.ololofarm.com/',
+        id: 11,
+        title: 'ALX Ventures',
+        image: 'https://img.youtube.com/vi/6kgnUOZDMFc/hqdefault.jpg',
+        link: 'https://www.youtube.com/watch?v=6kgnUOZDMFc',
+        description: 'Documentary',
+    },
+    {
+        id: 12,
+        title: 'LG HVAC',
+        image: 'https://img.youtube.com/vi/tPZZrHLWBJI/hqdefault.jpg',
+        link: 'https://www.youtube.com/watch?v=tPZZrHLWBJI',
         description: 'Documentary',
     }
 ];

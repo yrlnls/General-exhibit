@@ -15,6 +15,8 @@ const EducationSection: React.FC<{
               src={image}
               alt="Graduation"
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

@@ -4,7 +4,10 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div
+      className="min-h-screen bg-background bg-cover bg-center bg-no-repeat flex flex-col"
+      style={{ backgroundImage: "url('/Contact-bg.jpeg')" }}
+    >
       <Header />
       <div className="flex-1">
         <div className="pt-24 pb-12">

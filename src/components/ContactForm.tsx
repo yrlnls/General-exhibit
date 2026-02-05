@@ -30,6 +30,8 @@ const ContactForm = () => {
     src="/Contactlogo.png"
     alt="Contact logo"
     className="w-48 h-48 md:w-64 md:h-64 object-contain mb-6"
+    loading="lazy"
+    decoding="async"
   />
   <h2 className="text-3xl font-semibold text-white">
     Get In Touch

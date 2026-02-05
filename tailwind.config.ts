@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Century Gothic Regular"', 'sans-serif'],
-        body: ['"Century Gothic Regular"', 'sans-serif'],
+        heading: ['"Century Gothic"', '"CenturyGothic"', '"AppleGothic"', '"URW Gothic L"', 'sans-serif'],
+        body: ['"Century Gothic"', '"CenturyGothic"', '"AppleGothic"', '"URW Gothic L"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

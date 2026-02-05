@@ -25,6 +25,8 @@ const AchievementsSection = () => {
                 src="/centre.jpeg"
                 alt="ZIFF 2023 official selection"
                 className="w-full h-auto rounded-lg object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </figure>
 

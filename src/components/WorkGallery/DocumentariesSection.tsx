@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface Documentary {
-  id: string;
-  title: string;
-  videoId: string;
-}
+import { Documentary } from '@/data/videosData';
 
 const DocumentariesSection: React.FC<{ documentaries: Documentary[] }> = ({ documentaries }) => {
   return (
@@ -14,20 +9,52 @@ const DocumentariesSection: React.FC<{ documentaries: Documentary[] }> = ({ docu
       </div>
       
       <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto">
-        {documentaries.map((doc) => (
+        {documentaries.map((doc, index) => (
           <div key={doc.id} className="group relative overflow-hidden rounded-lg w-full">
-            <div className="aspect-video w-full">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${doc.videoId}`}
-                title={doc.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
+            {doc.videoId ? (
+              <div className="aspect-video w-full">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${doc.videoId}`}
+                  title={doc.title}
+                  frameBorder="0"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            ) : (
+              <article
+                className="relative group overflow-hidden rounded-lg cursor-pointer"
+                onClick={() => {
+                  if (doc.link && doc.link !== '#') {
+                    window.open(doc.link, '_blank', 'noopener,noreferrer');
+                  }
+                }}
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  {doc.image && (
+                    <img
+                      src={doc.image}
+                      alt={doc.title}
+                      className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      loading={index < 2 ? 'eager' : 'lazy'}
+                      decoding={index < 2 ? 'sync' : 'async'}
+                      fetchPriority={index < 2 ? 'high' : 'auto'}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col justify-end p-6">
+                    <h3 className="text-white text-2xl md:text-3xl font-semibold tracking-wide">
+                      {doc.title}
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            )}
           </div>
         ))}
       </div>

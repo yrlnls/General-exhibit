@@ -52,6 +52,7 @@ const BiographySection = () => {
                 alt="Jesse filming in the field"
                 className="w-full h-[260px] object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -63,6 +64,7 @@ const BiographySection = () => {
                   alt="Jesse filming in the field"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </span>
 

@@ -7,7 +7,9 @@ export interface Event {
 export interface Documentary {
   id: string;
   title: string;
-  videoId: string;
+  videoId?: string;
+  link?: string;
+  image?: string;
 }
 
 export interface Artwork {
@@ -37,15 +39,17 @@ export const documentaries: Documentary[] = [
     videoId: 'Nbg_Xqvo0zY', 
   },
   {
-    id: 'alx-ventures',
-    title: 'ALX Ventures Documentary',
-    videoId: '6kgnUOZDMFc', 
+    id: 'dw-77-percent',
+    title: 'DW The 77 Percent',
+    link: 'https://www.dw.com/en/the-rise-of-roller-skates-in-nairobi/video-62612611#:~:text=The%20streets%20of%20Nairobi%20aren,found%20their%20own%20skating%20oasis.',
+    image: '/DW.jpeg?w=800&h=800&fit=crop',
   },
   {
-    id: 'lg-hvac',
-    title: 'LG HVAC Documentary',
-    videoId: 'tPZZrHLWBJI',
-  }
+    id: 'ololo-farm',
+    title: 'Ololo Farm',
+    link: 'https://www.ololofarm.com/',
+    image: '/Ololo Farm Logo.png?w=800&h=800&fit=crop',
+  },
 ];
 
 export const artworks: Artwork[] = [

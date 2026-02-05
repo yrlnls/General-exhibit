@@ -54,6 +54,7 @@ const ClientsSection = () => {
                 src={`/${client.logo}`}
                 alt={client.name}
                 loading="lazy"
+                decoding="async"
                 className="
                   max-w-full
                   max-h-full
@@ -73,6 +74,5 @@ const ClientsSection = () => {
 };
 
 export default ClientsSection;
-
 
 

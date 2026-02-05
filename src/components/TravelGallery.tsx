@@ -52,6 +52,8 @@ const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
             alt={selectedImage.alt}
             className="max-w-4xl max-h-[90vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
+            loading="eager"
+            decoding="async"
           />
         </div>
       )}
@@ -60,4 +62,3 @@ const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
 };
 
 export default TravelGallery;
-
