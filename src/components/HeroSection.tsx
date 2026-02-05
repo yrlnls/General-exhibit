@@ -25,7 +25,7 @@ const HeroSection = () => {
       />
 
       {/* Darker overlay for readability */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-1">
