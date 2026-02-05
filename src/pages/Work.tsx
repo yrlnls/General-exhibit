@@ -40,6 +40,9 @@ const Work = () => {
 
           {/* Projects Section */}
           <div className="mt-10 border-t border-white/10 pt-10">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">Projects</h2>
+            </div>
             <WorkGallery
               items={workItems}
               aspectClass="aspect-video"

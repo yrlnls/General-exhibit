@@ -30,7 +30,7 @@ const WorkGallery: React.FC<{
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 loading={index < 4 ? 'eager' : 'lazy'}
                 decoding={index < 4 ? 'sync' : 'async'}
                 fetchPriority={index < 4 ? 'high' : 'auto'}
