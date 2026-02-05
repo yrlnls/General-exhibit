@@ -1,5 +1,5 @@
 import logo from "/Contactlogo.png"
-import heroImage from "/KEN10.jpg";
+import heroImage from "/ABOUT.png";
 import { useEffect } from "react";
 
 const HeroSection = () => {
