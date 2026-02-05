@@ -20,7 +20,11 @@ const Travel = () => {
         <div className="pt-24 pb-12">
           <div className="container mx-auto px-6">
             <div className="mt-12">
-              <WorkGallery items={workItems} />
+              <WorkGallery
+                items={workItems}
+                aspectClass="aspect-video"
+                gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto"
+              />
             </div>           
           </div>
         </div>
@@ -31,4 +35,3 @@ const Travel = () => {
 };
 
 export default Travel;
-

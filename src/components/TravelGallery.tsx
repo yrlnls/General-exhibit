@@ -14,17 +14,17 @@ const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
   return (
     <>
       <section className="relative w-full bg-background py-12">
-        <div className="grid grid-cols-2 gap-3 md:gap-4 p-4 md:p-8">
+        <div className="columns-2 md:columns-3 gap-x-3 md:gap-x-4 p-4 md:p-8">
           {images.map((image, index) => (
             <button
               key={image.id}
               onClick={() => setSelectedImage(image)}
-              className="relative overflow-hidden rounded-lg aspect-square group cursor-pointer"
+              className="relative w-full overflow-hidden rounded-lg group cursor-pointer break-inside-avoid mb-3 md:mb-4"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-auto block object-contain group-hover:scale-[1.02] transition-transform duration-300"
                 loading={index < 4 ? "eager" : "lazy"}
                 decoding={index < 4 ? "sync" : "async"}
                 fetchPriority={index < 4 ? "high" : "auto"}

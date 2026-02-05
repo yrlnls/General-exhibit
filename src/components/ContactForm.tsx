@@ -22,10 +22,10 @@ const ContactForm = () => {
 
   return (
     <section className="w-full py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
 
 {/* LEFT */}
-<div className="flex flex-col items-center justify-center text-center">
+<div className="flex flex-col items-center justify-center text-center md:items-end md:text-right">
   <img
     src="/Contactlogo.png"
     alt="Contact logo"
@@ -33,7 +33,7 @@ const ContactForm = () => {
     loading="lazy"
     decoding="async"
   />
-  <h2 className="text-3xl font-semibold text-white">
+  <h2 className="text-3xl font-semibold text-white mt-1">
     Get In Touch
   </h2>
 </div>
