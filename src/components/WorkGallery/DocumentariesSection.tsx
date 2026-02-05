@@ -5,12 +5,12 @@ const DocumentariesSection: React.FC<{ documentaries: Documentary[] }> = ({ docu
   return (
     <section className="py-8 space-y-4">
       <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Documentaries..</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 animate-fade-in">Documentaries..</h2>
       </div>
       
       <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto">
         {documentaries.map((doc, index) => (
-          <div key={doc.id} className="group relative overflow-hidden rounded-lg w-full">
+          <div key={doc.id} className="group relative overflow-hidden rounded-lg w-full shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
             {doc.videoId ? (
               <div className="aspect-video w-full">
                 <iframe

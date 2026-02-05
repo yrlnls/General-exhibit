@@ -41,8 +41,7 @@ export const documentaries: Documentary[] = [
   {
     id: 'dw-77-percent',
     title: 'DW The 77 Percent',
-    link: 'https://www.dw.com/en/the-rise-of-roller-skates-in-nairobi/video-62612611#:~:text=The%20streets%20of%20Nairobi%20aren,found%20their%20own%20skating%20oasis.',
-    image: '/DW.jpeg?w=800&h=800&fit=crop',
+    videoId: 'U87Ti87sbm0',
   },
   {
     id: 'ololo-farm',

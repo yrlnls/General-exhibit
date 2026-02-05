@@ -15,10 +15,10 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <a href="/" className="text-foreground font-semibold tracking-wider text-sm md:text-base hover:text-yellow-400 transition-colors">
+          <a href="/" className="text-white font-semibold tracking-wider text-sm md:text-base hover:text-yellow-400 transition-colors">
             JESSE OTUMBA OTIENO
           </a>
 
@@ -45,7 +45,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-white hover:text-yellow-400 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

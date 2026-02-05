@@ -18,7 +18,7 @@ const WorkGallery: React.FC<{
         {items.map((item, index) => (
           <article
             key={item.id}
-            className="relative group overflow-hidden rounded-xl cursor-pointer"
+            className="relative group overflow-hidden rounded-xl cursor-pointer shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
             onClick={() => {
               if (item.link && item.link !== '#') {
                 window.open(item.link, '_blank', 'noopener,noreferrer');

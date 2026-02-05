@@ -13,14 +13,14 @@ const NGOWorldSection: React.FC<{
   return (
     <section className="py-16 space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">NGO world..</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 animate-fade-in">NGO world..</h2>
       </div>
       
       <div className={gridClassName}>
         {items.map((item, index) => (
           <article
             key={item.id}
-            className="relative group overflow-hidden rounded-xl cursor-pointer"
+            className="relative group overflow-hidden rounded-xl cursor-pointer shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
             onClick={() => {
               if (item.link && item.link !== '#') {
                 window.open(item.link, '_blank', 'noopener,noreferrer');

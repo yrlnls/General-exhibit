@@ -10,12 +10,12 @@ const EventsSection: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
     <section className="py-16 space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Events..</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 animate-fade-in">Events..</h2>
       </div>
       
       <div className="grid gap-6 md:gap-8 grid-cols-1 px-4 md:px-8 max-w-6xl mx-auto">
         {events.map((event) => (
-          <div key={event.id} className="group relative overflow-hidden rounded-lg w-full max-w-3xl mx-auto">
+          <div key={event.id} className="group relative overflow-hidden rounded-lg w-full max-w-3xl mx-auto shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
             <div className="aspect-video w-full">
               <iframe
                 width="100%"
