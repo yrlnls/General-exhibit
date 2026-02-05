@@ -1,11 +1,19 @@
 import React from 'react';
 import { WorkItem } from '@/data/workItems';
 
-const WorkGallery: React.FC<{ items: WorkItem[] }> = ({ items }) => {
+const WorkGallery: React.FC<{
+  items: WorkItem[];
+  aspectClass?: string;
+  gridClassName?: string;
+}> = ({
+  items,
+  aspectClass = 'aspect-[4/3]',
+  gridClassName = 'grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto',
+}) => {
 
   return (
     <section className="w-full py-16">
-      <div className="grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto">
+      <div className={gridClassName}>
 
         {items.map((item, index) => (
           <article
@@ -13,12 +21,12 @@ const WorkGallery: React.FC<{ items: WorkItem[] }> = ({ items }) => {
             className="relative group overflow-hidden rounded-xl cursor-pointer"
             onClick={() => {
               if (item.link && item.link !== '#') {
-                window.location.href = item.link;
+                window.open(item.link, '_blank', 'noopener,noreferrer');
               }
             }}
           >
             {/* Image */}
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className={`relative ${aspectClass} overflow-hidden`}>
               <img
                 src={item.image}
                 alt={item.title}

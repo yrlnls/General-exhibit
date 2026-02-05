@@ -1,25 +1,33 @@
 import React from 'react';
 import { WorkItem } from '@/data/workItems';
 
-const NGOWorldSection: React.FC<{ items: WorkItem[] }> = ({ items }) => {
+const NGOWorldSection: React.FC<{
+  items: WorkItem[];
+  aspectClass?: string;
+  gridClassName?: string;
+}> = ({
+  items,
+  aspectClass = 'aspect-video',
+  gridClassName = 'grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto',
+}) => {
   return (
     <section className="py-16 space-y-8">
       <div className="text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">NGO world..</h2>
       </div>
       
-      <div className="grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto">
+      <div className={gridClassName}>
         {items.map((item, index) => (
           <article
             key={item.id}
             className="relative group overflow-hidden rounded-xl cursor-pointer"
             onClick={() => {
               if (item.link && item.link !== '#') {
-                window.location.href = item.link;
+                window.open(item.link, '_blank', 'noopener,noreferrer');
               }
             }}
           >
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className={`relative ${aspectClass} overflow-hidden`}>
               <img
                 src={item.image}
                 alt={item.title}

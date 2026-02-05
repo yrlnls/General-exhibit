@@ -13,7 +13,7 @@ const EventsSection: React.FC<{ events: Event[] }> = ({ events }) => {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Events..</h2>
       </div>
       
-      <div className="grid gap-4 px-4 md:px-0 max-w-2xl mx-auto">
+      <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto">
         {events.map((event) => (
           <div key={event.id} className="group relative overflow-hidden rounded-lg w-full">
             <div className="aspect-video w-full">

@@ -21,19 +21,21 @@ const ArtSection: React.FC<{ artworks: Artwork[] }> = ({ artworks }) => {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Art..</h2>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto">
         {artworks.map((art) => (
-          <div key={art.id} className="group relative overflow-hidden rounded-lg">
-            <iframe
-              width="100%"
-              height="315"
-              src={getEmbedUrl(art)}
-              title={art.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full aspect-video"
-            />
+          <div key={art.id} className="group relative overflow-hidden rounded-lg w-full">
+            <div className="aspect-video w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src={getEmbedUrl(art)}
+                title={art.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
         ))}
       </div>

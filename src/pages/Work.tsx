@@ -31,12 +31,20 @@ const Work = () => {
 
           {/* NGO World Section */}
           <div className="mt-10 border-t border-white/10 pt-10">
-            <NGOWorldSection items={ngoWorldItems} />
+            <NGOWorldSection
+              items={ngoWorldItems}
+              aspectClass="aspect-video"
+              gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto"
+            />
           </div>
 
           {/* Projects Section */}
           <div className="mt-10 border-t border-white/10 pt-10">
-            <WorkGallery items={workItems} />
+            <WorkGallery
+              items={workItems}
+              aspectClass="aspect-video"
+              gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto"
+            />
           </div>
 
         </div>
