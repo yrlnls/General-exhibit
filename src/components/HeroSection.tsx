@@ -1,4 +1,4 @@
-import logo from "/Contactlogo.png"
+import logo from "/Contactlogo.png";
 import heroImage from "/ABOUT.png";
 import { useEffect } from "react";
 
@@ -6,33 +6,44 @@ const HeroSection = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      document.documentElement.style.setProperty('--hero-scroll', scrollY.toString());
+      document.documentElement.style.setProperty(
+        "--hero-scroll",
+        scrollY.toString()
+      );
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-parallax-bg"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
-      
-      <div className="relative z-10 text-center px-6 hero-parallax-content space-y-4">
-       <img
+
+      {/* Darker overlay for readability */}
+      <div className="absolute inset-0 bg-black/70" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-1">
+        <img
           src={logo}
           alt="Logo"
-          className="mx-auto mb-6 w-32 md:w-40 lg:w-44 object-contain animate-fade-in"
+          className="w-40 md:w-48 lg:w-60 object-contain animate-fade-in"
           style={{ animationDelay: "0.1s" }}
-       />
+        />
 
-        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4 hero-text-shadow animate-fade-in">
+        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-foreground hero-text-shadow animate-fade-in">
           Art, rhythm, and real human stories
         </h1>
-        <p className="text-foreground text-xl md:text-2xl hero-text-shadow animate-fade-in" style={{ animationDelay: "0.2s" }}>
+
+        <p
+          className="text-foreground text-lg md:text-xl hero-text-shadow animate-fade-in"
+          style={{ animationDelay: "0.2s" }}
+        >
           See the future beyond.
         </p>
       </div>
@@ -41,4 +52,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
