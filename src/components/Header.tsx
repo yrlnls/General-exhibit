@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "About", href: "/", active: true },
+  { label: "About", href: "/" },
   { label: "Work", href: "/work" },
   { label: "Travel", href: "/travel" },
   { label: "Education", href: "/education" },
@@ -29,10 +29,8 @@ const Header = () => {
                 <a
                   href={item.href}
                   className={
-                    (item.label === "Travel" && location.pathname === "/travel") ||
-                    (item.label === "Education" && location.pathname === "/education") ||
-                    (item.label === "Contact" && location.pathname === "/contact") ||
-                    item.active
+                    (item.href === "/" && location.pathname === "/") ||
+                    (item.href !== "/" && location.pathname === item.href)
                       ? "nav-link-active font-medium"
                       : "nav-link"
                   }
@@ -61,10 +59,8 @@ const Header = () => {
                   <a
                     href={item.href}
                     className={
-                      (item.label === "Travel" && location.pathname === "/travel") ||
-                      (item.label === "Education" && location.pathname === "/education") ||
-                      (item.label === "Contact" && location.pathname === "/contact") ||
-                      item.active
+                      (item.href === "/" && location.pathname === "/") ||
+                      (item.href !== "/" && location.pathname === item.href)
                         ? "nav-link-active font-medium"
                         : "nav-link"
                     }

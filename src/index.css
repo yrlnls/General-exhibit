@@ -107,11 +107,37 @@
 
 @layer components {
   .nav-link {
-    @apply text-white/90 hover:text-yellow-400 transition-colors duration-200;
+    @apply text-white/90 text-sm md:text-base tracking-wider transition-colors duration-200 inline-block relative;
   }
 
   .nav-link-active {
-    @apply text-white font-medium;
+    @apply text-yellow-400 text-sm md:text-base tracking-wider font-semibold inline-block relative;
+  }
+
+  .nav-link::after,
+  .nav-link-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: #facc15;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease;
+  }
+
+  .nav-link:hover {
+    color: #facc15;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .nav-link-active::after {
+    transform: scaleX(1);
   }
 
   .section-heading {
