@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -6,6 +7,11 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error' | 'config-error'>('idle');
+
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -14,20 +20,37 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = 'Website Reachout';
-    const body = [
-      `Name: ${formData.name}`,
-      `Email: ${formData.email}`,
-      '',
-      formData.message,
-    ].join('\n');
-    const mailto = `mailto:jesieotumba@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setFormData({ name: '', email: '', message: '' });
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('config-error');
+      return;
+    }
+
+    setStatus('sending');
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          title: 'Website Reachout',
+          name: formData.name,
+          email: formData.email,
+          from_name: formData.name,
+          from_email: formData.email,
+          reply_to: formData.email,
+          message: formData.message,
+          to_email: 'jesieotumba@gmail.com',
+        },
+        { publicKey }
+      );
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -60,6 +83,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={status === 'sending'}
               className="
                 w-full
                 px-4 py-4
@@ -78,6 +102,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={status === 'sending'}
               className="
                 w-full
                 px-4 py-4
@@ -96,6 +121,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               rows={8}
+              disabled={status === 'sending'}
               className="
                 w-full
                 px-4 py-4
@@ -111,17 +137,36 @@ const ContactForm = () => {
             <div className="mt-6">
               <button
                 type="submit"
+                disabled={status === 'sending'}
                 className="
                   px-8 py-3
                   border border-white/50
                   text-white
                   hover:bg-white hover:text-black
                   transition-colors
+                  disabled:opacity-60
+                  disabled:cursor-not-allowed
                 "
               >
-                Send Message
+                {status === 'sending' ? 'Sending…' : 'Send Message'}
               </button>
             </div>
+
+            {status === 'success' && (
+              <p className="mt-4 text-sm text-emerald-200">
+                Message sent. I’ll get back to you soon.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="mt-4 text-sm text-red-200">
+                Something went wrong. Please try again.
+              </p>
+            )}
+            {status === 'config-error' && (
+              <p className="mt-4 text-sm text-amber-200">
+                Email service isn’t configured yet. Please add the EmailJS keys.
+              </p>
+            )}
           </form>
         </div>
       </div>
