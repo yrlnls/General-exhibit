@@ -68,14 +68,14 @@ export const workItems: WorkItem[] = [
     {
         id: 11,
         title: 'ALX Ventures',
-        image: 'https://img.youtube.com/vi/6kgnUOZDMFc/mqdefault.jpg',
+        image:'/ALX-thumb.png?w=800&h=800&fit=crop',
         link: 'https://www.youtube.com/watch?v=6kgnUOZDMFc',
         description: 'Documentary',
     },
     {
         id: 12,
         title: 'LG HVAC',
-        image: 'https://img.youtube.com/vi/tPZZrHLWBJI/mqdefault.jpg',
+        image:'/LG-THUMB.png?w=800&h=800&fit=crop',
         link: 'https://www.youtube.com/watch?v=tPZZrHLWBJI',
         description: 'Documentary',
     }

@@ -6,8 +6,8 @@ const navItems = [
   { label: "About", href: "/" },
   { label: "Work", href: "/work" },
   { label: "Travel", href: "/travel" },
-  { label: "Education", href: "/education" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Education", href: "/education" },
+  { label: "Connect", href: "/connect" },
 ];
 
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
                   className={
                     (item.href === "/" && location.pathname === "/") ||
                     (item.href !== "/" && location.pathname === item.href)
-                      ? "nav-link-active font-medium"
+                      ? "nav-link-active"
                       : "nav-link"
                   }
                 >
@@ -61,7 +61,7 @@ const Header = () => {
                     className={
                       (item.href === "/" && location.pathname === "/") ||
                       (item.href !== "/" && location.pathname === item.href)
-                        ? "nav-link-active font-medium"
+                        ? "nav-link-active"
                         : "nav-link"
                     }
                     onClick={() => setMobileMenuOpen(false)}

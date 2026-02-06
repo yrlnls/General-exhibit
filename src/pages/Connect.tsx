@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
-const Contact = () => {
+const Connect = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
@@ -29,4 +29,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Connect;

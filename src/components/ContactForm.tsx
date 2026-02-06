@@ -32,18 +32,18 @@ const ContactForm = () => {
 
   return (
     <section className="w-full py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0.5 items-center">
 
 {/* LEFT */}
-<div className="flex flex-col items-center justify-center text-center md:items-end md:text-right">
+<div className="flex flex-col items-center justify-center text-center gap-0.25">
   <img
     src="/Contactlogo.png"
     alt="Contact logo"
-    className="w-48 h-48 md:w-64 md:h-64 object-contain mb-6"
+    className="w-48 h-48 md:w-64 md:h-64 object-contain"
     loading="lazy"
     decoding="async"
   />
-  <h2 className="text-3xl font-semibold text-white mt-1">
+  <h2 className="text-3xl font-semibold text-white">
     Get In Touch
   </h2>
 </div>

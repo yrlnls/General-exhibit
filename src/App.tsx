@@ -9,7 +9,7 @@ import Work from "./pages/Work";
 import Travel from "./pages/Travel";
 import Destination from "./pages/Destination";
 import Education from "./pages/Education";
-import Contact from "./pages/Contact";
+import Connect from "./pages/Connect";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/travel" element={<Travel />} />
           <Route path="/travel/:slug" element={<Destination />} />
           <Route path="/education" element={<Education />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/connect" element={<Connect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

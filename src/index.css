@@ -111,11 +111,10 @@
   }
 
   .nav-link-active {
-    @apply text-yellow-400 text-sm md:text-base tracking-wider font-semibold inline-block relative;
+    @apply text-yellow-400 text-sm md:text-base tracking-wider font-bold inline-block relative;
   }
 
-  .nav-link::after,
-  .nav-link-active::after {
+  .nav-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -133,10 +132,6 @@
   }
 
   .nav-link:hover::after {
-    transform: scaleX(1);
-  }
-
-  .nav-link-active::after {
     transform: scaleX(1);
   }
 
