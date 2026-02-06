@@ -43,7 +43,8 @@ const DestinationsCarousel: React.FC<{ destinations: TravelDestination[] }> = ({
               <img
                 src={destination.image}
                 alt={`${destination.location}, ${destination.country}`}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className={`w-full h-full ${destination.imageFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-300`}
+                style={{ objectPosition: destination.imagePosition ?? 'center' }}
                 loading="lazy"
                 decoding="async"
               />

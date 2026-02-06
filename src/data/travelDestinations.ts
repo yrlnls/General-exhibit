@@ -7,6 +7,8 @@ export interface TravelDestination {
   slug: string;
   photos: string[];
   videos: { title: string; videoUrl: string }[];
+  imagePosition?: string;
+  imageFit?: 'cover' | 'contain';
 }
 
 export interface TravelVideo {
@@ -56,6 +58,8 @@ export const travelDestinations: TravelDestination[] = [
     location: 'Antananarivo',
     image: '/MAD2.jpg?w=1200&h=600&fit=crop',
     slug: 'madagascar',
+    imagePosition: '50% 70%',
+    imageFit: 'cover',
     photos: [
       '/MAD1.jpg', '/MAD2.jpg', '/MAD3.jpg', '/MAD4.jpg', '/MAD5.jpg',
       '/MAD6.jpg', '/MAD7.jpg', '/MAD8.jpg', '/MAD9.jpg', '/MAD10.jpg',
@@ -117,7 +121,9 @@ export const travelDestinations: TravelDestination[] = [
     slug: 'south-sudan',
     photos: [
       '/SS1.JPG', '/SS2.JPG', '/SS3.JPG', '/SS4.JPG', '/SS5.JPG',
-      '/SS6.JPG', '/SS7.JPG', '/SS8.JPG', '/SS9.JPG'
+      '/SS6.JPG', '/SS7.JPG', '/SS8.JPG', '/SS9.JPG', '/SS10.JPG',
+      '/SS11.JPG', '/SS12.JPG', '/SS13.jpg', '/SS14.JPG', '/SS15.jpg',
+      '/SS16.JPG', '/SS17.jpg', '/SS18.JPG', 
     ],
     videos: [],
   },
@@ -128,9 +134,8 @@ export const travelDestinations: TravelDestination[] = [
     image: '/UGANDA.jpg?w=1200&h=600&fit=crop',
     slug: 'uganda',
     photos: [
-      '/UGANDA.jpg',
+      '/UGANDA.jpg','/UG.jpg',
     ],
     videos: [],
   },
 ];
-

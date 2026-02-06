@@ -47,7 +47,7 @@ export const documentaries: Documentary[] = [
     id: 'ololo-farm',
     title: 'Ololo Farm',
     link: 'https://www.ololofarm.com/',
-    image: '/Ololo Farm Logo.png?w=800&h=800&fit=crop',
+    image: '/OLOLO-thumb.jpeg',
   },
 ];
 

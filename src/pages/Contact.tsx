@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
-      style={{ backgroundImage: "url('/Contact-bg.jpeg')" }}
+      style={{ backgroundImage: "url('/Contact-bg1.jpeg')" }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50 z-0"></div>

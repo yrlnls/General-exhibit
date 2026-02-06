@@ -5,6 +5,9 @@ export interface WorkItem {
     link?: string;
     badge?: string;
     description?: string;
+    aspectClass?: string;
+    imageFit?: 'cover' | 'contain';
+    imagePosition?: string;
 }
 
 export const ngoWorldItems: WorkItem[] = [
@@ -29,6 +32,7 @@ export const ngoWorldItems: WorkItem[] = [
         image: '/ETH00.jpg?w=800&h=800&fit=crop',
         link: 'https://au.int/en/pressreleases/20240401/african-union-commission-meets-high-level-donor-mission-multi-hazard-early',
         description: 'UNDRR Donor Mission | AU Commission',
+        imagePosition: 'center',
     },
     {
         id: 3,
@@ -40,8 +44,9 @@ export const ngoWorldItems: WorkItem[] = [
     {
         id: 4,
         title: 'SOUTH SUDAN',
-        image: '/SS5.JPG?w=800&h=800&fit=crop',
+        image: '/SS9.JPG?w=800&h=800&fit=crop',
         description: 'UNDRR',
+        imagePosition: 'bottom',
     },
 ];
 
@@ -63,14 +68,14 @@ export const workItems: WorkItem[] = [
     {
         id: 11,
         title: 'ALX Ventures',
-        image: 'https://img.youtube.com/vi/6kgnUOZDMFc/hqdefault.jpg',
+        image: 'https://img.youtube.com/vi/6kgnUOZDMFc/mqdefault.jpg',
         link: 'https://www.youtube.com/watch?v=6kgnUOZDMFc',
         description: 'Documentary',
     },
     {
         id: 12,
         title: 'LG HVAC',
-        image: 'https://img.youtube.com/vi/tPZZrHLWBJI/hqdefault.jpg',
+        image: 'https://img.youtube.com/vi/tPZZrHLWBJI/mqdefault.jpg',
         link: 'https://www.youtube.com/watch?v=tPZZrHLWBJI',
         description: 'Documentary',
     }

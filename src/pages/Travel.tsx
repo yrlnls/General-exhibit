@@ -11,6 +11,8 @@ const Travel = () => {
     description: dest.location,
     image: dest.image,
     link: `/travel/${dest.slug}`,
+    imagePosition: dest.imagePosition,
+    imageFit: dest.imageFit,
   }));
 
   return (
