@@ -54,125 +54,144 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="w-full py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0.5 items-center">
-
-{/* LEFT */}
-<div className="flex flex-col items-center justify-center text-center gap-0.25">
-  <img
-    src="/Contactlogo.png"
-    alt="Contact logo"
-    className="w-48 h-48 md:w-64 md:h-64 object-contain"
-    loading="lazy"
-    decoding="async"
-  />
-  <h2 className="text-3xl font-semibold text-white">
-    Get In Touch
-  </h2>
-</div>
-
-
-        {/* RIGHT */}
-        <div className="w-full max-w-md">
-          <form onSubmit={handleSubmit} className="space-y-0">
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              disabled={status === 'sending'}
-              className="
-                w-full
-                px-4 py-4
-                bg-transparent
-                border border-white/40
-                text-white
-                placeholder-white/50
-                focus:outline-none
-              "
+    <section className="w-full py-16">
+      <div className="mirror-surface">
+        <span className="mirror-title">Connect</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center p-6 md:p-10">
+          {/* LEFT */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+            <img
+              src="/Contactlogo.png"
+              alt="GE Collective"
+              className="w-36 h-36 md:w-44 md:h-44 object-contain"
+              loading="lazy"
+              decoding="async"
             />
+            <p className="section-kicker">Get In Touch</p>
+            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-sm">
+              Tell us about the story you want to bring to life. We'll shape it
+              with intention, precision, and care.
+            </p>
+          </div>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              disabled={status === 'sending'}
-              className="
-                w-full
-                px-4 py-4
-                bg-transparent
-                border-x border-b border-white/40
-                text-white
-                placeholder-white/50
-                focus:outline-none
-              "
-            />
-
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={8}
-              disabled={status === 'sending'}
-              className="
-                w-full
-                px-4 py-4
-                bg-transparent
-                border-x border-b border-white/40
-                text-white
-                placeholder-white/50
-                resize-none
-                focus:outline-none
-              "
-            />
-
-            <div className="mt-6">
-              <button
-                type="submit"
+          {/* RIGHT */}
+          <div className="w-full max-w-md">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 disabled={status === 'sending'}
                 className="
-                  px-8 py-3
-                  border border-white/50
+                  w-full
+                  px-4
+                  py-3.5
+                  rounded-lg
+                  bg-black/40
+                  border
+                  border-white/20
                   text-white
-                  hover:bg-white hover:text-black
+                  placeholder-white/50
+                  focus:outline-none
+                  focus:border-primary/70
                   transition-colors
-                  disabled:opacity-60
-                  disabled:cursor-not-allowed
                 "
-              >
-                {status === 'sending' ? 'Sending…' : 'Send Message'}
-              </button>
-            </div>
+              />
 
-            {status === 'success' && (
-              <p className="mt-4 text-sm text-emerald-200">
-                Message sent. I’ll get back to you soon.
-              </p>
-            )}
-            {status === 'error' && (
-              <p className="mt-4 text-sm text-red-200">
-                Something went wrong. Please try again.
-              </p>
-            )}
-            {status === 'config-error' && (
-              <p className="mt-4 text-sm text-amber-200">
-                Email service isn’t configured yet. Please add the EmailJS keys.
-              </p>
-            )}
-          </form>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                disabled={status === 'sending'}
+                className="
+                  w-full
+                  px-4
+                  py-3.5
+                  rounded-lg
+                  bg-black/40
+                  border
+                  border-white/20
+                  text-white
+                  placeholder-white/50
+                  focus:outline-none
+                  focus:border-primary/70
+                  transition-colors
+                "
+              />
+
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={6}
+                disabled={status === 'sending'}
+                className="
+                  w-full
+                  px-4
+                  py-3.5
+                  rounded-lg
+                  bg-black/40
+                  border
+                  border-white/20
+                  text-white
+                  placeholder-white/50
+                  resize-none
+                  focus:outline-none
+                  focus:border-primary/70
+                  transition-colors
+                "
+              />
+
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="
+                    w-full
+                    px-8
+                    py-3.5
+                    rounded-lg
+                    border
+                    border-white/30
+                    text-white
+                    hover:border-primary/60
+                    hover:text-primary
+                    transition-colors
+                    disabled:opacity-60
+                    disabled:cursor-not-allowed
+                  "
+                >
+                  {status === 'sending' ? 'Sending…' : 'Send Message'}
+                </button>
+              </div>
+
+              {status === 'success' && (
+                <p className="text-sm text-emerald-200">
+                  Message sent. I'll get back to you soon.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="text-sm text-red-200">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+              {status === 'config-error' && (
+                <p className="text-sm text-amber-200">
+                  Email service isn't configured yet. Please add the EmailJS keys.
+                </p>
+              )}
+            </form>
+          </div>
         </div>
       </div>
-
-      {/* DIVIDER */}
-      <div className="border-b border-white/20 mt-24" />
     </section>
   );
 };

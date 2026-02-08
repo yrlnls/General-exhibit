@@ -19,54 +19,61 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section id="clients" className="py-10">
+    <section id="clients" className="py-16">
       <div className="container mx-auto px-6">
-        <h2 className="section-heading mb-12 text-center">CLIENTS</h2>
-        <div
-          className="
-            grid
-            grid-cols-2
-            sm:grid-cols-3
-            md:grid-cols-4
-            lg:grid-cols-8
-            gap-x-10
-            gap-y-14
-            place-items-center
-            max-w-7xl
-            mx-auto
-          "
-        >
-          {clients.map((client) => (
-            <div
-              key={client.name}
-              className="
-                w-full
-                h-32
-                md:h-36
-                lg:h-40
-                flex
-                items-center
-                justify-center
-                px-2
-              "
-            >
-              <img
-                src={`/${client.logo}`}
-                alt={client.name}
-                loading="lazy"
-                decoding="async"
+        <div className="mirror-surface">
+          <span className="mirror-title">Clients</span>
+          <div
+            className="
+              grid
+              grid-cols-2
+              sm:grid-cols-3
+              md:grid-cols-4
+              lg:grid-cols-8
+              gap-x-10
+              gap-y-12
+              place-items-center
+              max-w-7xl
+              mx-auto
+              p-6
+              md:p-10
+              pt-12
+              md:pt-14
+            "
+          >
+            {clients.map((client) => (
+              <div
+                key={client.name}
                 className="
-                  max-w-full
-                  max-h-full
-                  object-contain
-                  scale-125
-                  transition-transform
-                  duration-200
-                  hover:scale-140
+                  w-full
+                  h-24
+                  md:h-28
+                  lg:h-32
+                  flex
+                  items-center
+                  justify-center
+                  px-2
                 "
-              />
-            </div>
-          ))}
+              >
+                <img
+                  src={`/${client.logo}`}
+                  alt={client.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="
+                    max-w-full
+                    max-h-full
+                    object-contain
+                    opacity-70
+                    transition-all
+                    duration-300
+                    hover:opacity-100
+                    hover:scale-110
+                  "
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -74,5 +81,3 @@ const ClientsSection = () => {
 };
 
 export default ClientsSection;
-
-

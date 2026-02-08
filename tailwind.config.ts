@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ['"Century Gothic"', '"CenturyGothic"', '"AppleGothic"', '"URW Gothic L"', 'sans-serif'],
-        body: ['"Century Gothic"', '"CenturyGothic"', '"AppleGothic"', '"URW Gothic L"', 'sans-serif'],
+        body: ['"Source Sans 3"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -77,14 +77,14 @@ export default {
           to: { height: "0" },
         },
         "fade-in": {
-          from: { opacity: "0", transform: "translateY(20px)" },
+          from: { opacity: "0", transform: "translateY(16px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out forwards",
+        "fade-in": "fade-in 1.2s ease-out forwards",
       },
     },
   },

@@ -17,7 +17,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[620px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <img
         src={heroImage}
@@ -29,28 +29,32 @@ const HeroSection = () => {
         fetchPriority="high"
       />
 
-      {/* Darker overlay for readability */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 film-grain" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-1">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-4">
         <img
           src={logo}
-          alt="Logo"
-          className="w-40 md:w-48 lg:w-60 object-contain animate-fade-in"
+          alt="GE Collective logo"
+          className="w-36 md:w-44 lg:w-52 object-contain animate-fade-in"
           style={{ animationDelay: "0.1s" }}
           loading="eager"
           decoding="async"
           fetchPriority="high"
         />
 
-        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-foreground hero-text-shadow animate-fade-in">
+        <p className="section-kicker animate-fade-in" style={{ animationDelay: "0.15s" }}>
           Art, rhythm, and real human stories
+        </p>
+
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground hero-text-shadow animate-fade-in">
+          Stories. Design. Motion.
         </h1>
 
         <p
-          className="text-foreground text-lg md:text-xl hero-text-shadow animate-fade-in"
-          style={{ animationDelay: "0.2s" }}
+          className="text-foreground text-base md:text-lg hero-text-shadow animate-fade-in"
+          style={{ animationDelay: "0.25s" }}
         >
           See the future beyond.
         </p>

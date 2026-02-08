@@ -12,44 +12,31 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-24 pb-12">
-        <div className="container mx-auto px-6">
-          {/* Events Section */}
-          <div className="mt-4">
-            <EventsSection events={events} />
-          </div>
-
-          {/* Documentaries Section */}
-          <div className="mt-10 border-t border-white/10 pt-10">
-            <DocumentariesSection documentaries={documentaries} />
-          </div>
-
-          {/* Art Section */}
-          <div className="mt-10 border-t border-white/10 pt-10">
-            <ArtSection artworks={artworks} />
-          </div>
-
-          {/* NGO World Section */}
-          <div className="mt-10 border-t border-white/10 pt-10">
-            <NGOWorldSection
-              items={ngoWorldItems}
-              aspectClass="aspect-video"
-              gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto"
-            />
-          </div>
-
-          {/* Projects Section */}
-          <div className="mt-10 border-t border-white/10 pt-10">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white animate-fade-in">Projects</h2>
+      <div className="pt-28 pb-12">
+        <div className="container mx-auto px-6 space-y-10">
+          <div className="flex justify-end">
+            <div className="text-right space-y-2">
+              <p className="section-kicker">Featured Work</p>
+              <h1 className="section-heading-right">Projects & Stories</h1>
             </div>
-            <WorkGallery
-              items={workItems}
-              aspectClass="aspect-video"
-              gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 px-4 md:px-8 max-w-6xl mx-auto"
-            />
           </div>
 
+          <EventsSection events={events} />
+          <DocumentariesSection documentaries={documentaries} />
+          <ArtSection artworks={artworks} />
+          <NGOWorldSection items={ngoWorldItems} aspectClass="aspect-video" />
+
+          <div className="mirror-surface">
+            <span className="mirror-title">Projects</span>
+            <div className="p-6 md:p-10">
+              <WorkGallery
+                items={workItems}
+                aspectClass="aspect-video"
+                sectionClassName="py-0"
+                gridClassName="grid gap-6 md:gap-8 grid-cols-1"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

@@ -10,6 +10,7 @@ import Travel from "./pages/Travel";
 import Destination from "./pages/Destination";
 import Education from "./pages/Education";
 import Connect from "./pages/Connect";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/work" element={<Work />} />
           <Route path="/travel" element={<Travel />} />
           <Route path="/travel/:slug" element={<Destination />} />
+          <Route path="/about" element={<About />} />
           <Route path="/education" element={<Education />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="*" element={<NotFound />} />

@@ -4,86 +4,86 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
 
     --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 96%;
 
     --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 43 90% 50%;
-    --primary-foreground: 222 30% 12%;
+    --primary: 176 38% 48%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 43 90% 50%;
-    --accent-foreground: 222 30% 12%;
+    --accent: 176 38% 48%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 43 90% 50%;
+    --ring: 176 38% 48%;
 
     --radius: 0.5rem;
 
     --font-heading: "Century Gothic", "CenturyGothic", "CenturyGothic", "URW Gothic L", sans-serif;
-    --font-body: "Century Gothic", "CenturyGothic", "CenturyGothic", "URW Gothic L", sans-serif;
+    --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 
     --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 43 90% 50%;
-    --sidebar-primary-foreground: 222 30% 12%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 176 38% 48%;
+    --sidebar-primary-foreground: 0 0% 10%;
     --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 43 90% 50%;
+    --sidebar-ring: 176 38% 48%;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
 
     --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 96%;
 
     --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 43 90% 50%;
-    --primary-foreground: 222 30% 12%;
+    --primary: 176 38% 48%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 43 90% 50%;
-    --accent-foreground: 222 30% 12%;
+    --accent: 176 38% 48%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 43 90% 50%;
+    --ring: 176 38% 48%;
 
     --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 43 90% 50%;
-    --sidebar-primary-foreground: 222 30% 12%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 176 38% 48%;
+    --sidebar-primary-foreground: 0 0% 10%;
     --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 43 90% 50%;
+    --sidebar-ring: 176 38% 48%;
   }
 }
 
@@ -107,11 +107,12 @@
 
 @layer components {
   .nav-link {
-    @apply text-white/90 text-sm md:text-base tracking-wider transition-colors duration-200 inline-block relative;
+    @apply text-white/80 text-xs md:text-sm tracking-[0.25em] uppercase transition-colors duration-300 inline-block relative;
   }
 
   .nav-link-active {
-    @apply text-yellow-400 text-sm md:text-base tracking-wider font-bold inline-block relative;
+    @apply text-sm md:text-sm tracking-[0.25em] uppercase font-semibold inline-block relative;
+    color: hsl(var(--accent));
   }
 
   .nav-link::after {
@@ -121,22 +122,78 @@
     right: 0;
     bottom: -6px;
     height: 2px;
-    background-color: #facc15;
+    background-color: hsl(var(--accent));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 200ms ease;
   }
 
   .nav-link:hover {
-    color: #facc15;
+    color: hsl(var(--accent));
   }
 
   .nav-link:hover::after {
     transform: scaleX(1);
   }
 
+  .nav-link-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: hsl(var(--accent));
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
   .section-heading {
-    @apply text-5xl md:text-6xl font-bold tracking-tight text-white mb-10 animate-fade-in;
+    @apply text-3xl md:text-4xl font-semibold tracking-tight text-white mb-10 animate-fade-in;
+  }
+
+  .section-heading-right {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight text-white text-right;
+  }
+
+  .section-kicker {
+    @apply text-xs md:text-sm uppercase tracking-[0.4em] text-white/60;
+  }
+
+  .mirror-surface {
+    @apply relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-black/40 to-black/70 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.8)] backdrop-blur-sm;
+  }
+
+  .mirror-title {
+    @apply absolute top-6 right-6 text-xs uppercase tracking-[0.4em] text-white/60 pointer-events-none z-10;
+  }
+
+  .mirror-divider {
+    @apply border-t border-white/10;
+  }
+
+  .mirror-card {
+    @apply relative flex flex-col md:flex-row overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-[0_20px_60px_-35px_rgba(0,0,0,0.85)];
+  }
+
+  .mirror-card-even {
+    @apply md:flex-row-reverse;
+  }
+
+  .mirror-image {
+    @apply relative md:w-1/2 overflow-hidden;
+  }
+
+  .mirror-body {
+    @apply md:w-1/2 p-6 md:p-10 text-white/80;
+  }
+
+  .mirror-caption {
+    @apply text-white/60 text-sm tracking-[0.2em] uppercase;
+  }
+
+  .soft-glow {
+    box-shadow: 0 0 40px rgba(75, 167, 163, 0.18);
   }
 
   .hero-overlay {
@@ -156,5 +213,11 @@
     transform: translateY(calc(var(--hero-scroll) * -0.2));
     opacity: calc(1 - (var(--hero-scroll) / 400));
     transition: transform 0.05s linear, opacity 0.05s linear;
+  }
+
+  .film-grain {
+    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 55%),
+      radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
+      radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
   }
 }
