@@ -16,15 +16,13 @@ const ArtSection: React.FC<{ artworks: Artwork[] }> = ({ artworks }) => {
   };
 
   return (
-    <section className="py-12">
-      <div className="mirror-surface">
-        <span className="mirror-title">Art</span>
-        <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 p-6 md:p-10">
+    <section className="py-8 space-y-4 scroll-reveal">
+      <h2 className="section-heading mb-12">Art</h2>
+      
+      <div className="mirror-panel">
+        <div className="mirror-panel-inner grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto">
           {artworks.map((art) => (
-            <div
-              key={art.id}
-              className="group relative overflow-hidden rounded-2xl w-full border border-white/10 bg-black/50 shadow-lg shadow-black/30 transition-transform duration-300 hover:-translate-y-1"
-            >
+            <div key={art.id} className="group relative overflow-hidden rounded-lg w-full border border-white/10 bg-black/40 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="aspect-video w-full">
                 <iframe
                   width="100%"

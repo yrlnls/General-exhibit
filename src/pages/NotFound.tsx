@@ -10,11 +10,10 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center space-y-3">
-        <p className="section-kicker">GE Collective</p>
-        <h1 className="text-4xl font-semibold text-white">404</h1>
-        <p className="text-white/60">Page not found.</p>
-        <a href="/" className="text-primary hover:underline">
+      <div className="text-center mirror-panel mirror-panel-inner">
+        <h1 className="mb-4 text-4xl font-bold text-white">404</h1>
+        <p className="mb-6 text-lg text-white/70">Oops! Page not found.</p>
+        <a href="/" className="text-accent hover:underline">
           Return to Home
         </a>
       </div>

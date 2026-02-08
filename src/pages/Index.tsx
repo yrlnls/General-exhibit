@@ -10,20 +10,18 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <main className="relative">
-        <div
-          className="absolute inset-0 bg-cover bg-fixed bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: `url(/background.jpg)` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
-        <div className="absolute inset-0 film-grain opacity-70" />
-        <div className="relative z-10 space-y-6 md:space-y-10 py-6">
+      <div
+        className="min-h-screen bg-cover bg-fixed bg-center bg-no-repeat relative"
+        style={{ backgroundImage: `url(/background.jpg)` }}
+      >
+        <div className="absolute inset-0 cinema-overlay" />
+        <div className="relative z-10">
           <BiographySection />
           <AchievementsSection />
           <ClientsSection />
           <Footer />
         </div>
-      </main>
+      </div>
     </div>
   );
 };

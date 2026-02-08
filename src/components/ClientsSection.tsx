@@ -19,12 +19,13 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section id="clients" className="py-16">
+    <section id="clients" className="py-10 scroll-reveal">
       <div className="container mx-auto px-6">
-        <div className="mirror-surface">
-          <span className="mirror-title">Clients</span>
+        <h2 className="section-heading mb-8">Clients</h2>
+        <div className="mirror-panel">
           <div
             className="
+              mirror-panel-inner
               grid
               grid-cols-2
               sm:grid-cols-3
@@ -35,10 +36,6 @@ const ClientsSection = () => {
               place-items-center
               max-w-7xl
               mx-auto
-              p-6
-              md:p-10
-              pt-12
-              md:pt-14
             "
           >
             {clients.map((client) => (
@@ -46,9 +43,9 @@ const ClientsSection = () => {
                 key={client.name}
                 className="
                   w-full
-                  h-24
-                  md:h-28
-                  lg:h-32
+                  h-28
+                  md:h-32
+                  lg:h-36
                   flex
                   items-center
                   justify-center
@@ -64,10 +61,10 @@ const ClientsSection = () => {
                     max-w-full
                     max-h-full
                     object-contain
-                    opacity-70
-                    transition-all
+                    scale-100
+                    transition-transform
                     duration-300
-                    hover:opacity-100
+                    ease-out
                     hover:scale-110
                   "
                 />

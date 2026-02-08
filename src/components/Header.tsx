@@ -15,11 +15,11 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <a href="/" className="text-white/90 font-semibold tracking-[0.4em] text-xs md:text-sm uppercase hover:text-white transition-colors">
-            GE Collective
+          <a href="/" className="text-white font-semibold tracking-wider text-sm md:text-base hover:text-accent transition-colors">
+            GE COLLECTIVE
           </a>
 
           {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ const Header = () => {
                   href={item.href}
                   className={
                     (item.href === "/" && location.pathname === "/") ||
-                    (item.href !== "/" && location.pathname.startsWith(item.href))
+                    (item.href !== "/" && location.pathname === item.href)
                       ? "nav-link-active"
                       : "nav-link"
                   }
@@ -43,8 +43,9 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-primary transition-colors"
+            className="md:hidden text-white hover:text-accent transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -60,7 +61,7 @@ const Header = () => {
                     href={item.href}
                     className={
                       (item.href === "/" && location.pathname === "/") ||
-                      (item.href !== "/" && location.pathname.startsWith(item.href))
+                      (item.href !== "/" && location.pathname === item.href)
                         ? "nav-link-active"
                         : "nav-link"
                     }

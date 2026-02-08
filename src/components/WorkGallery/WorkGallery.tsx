@@ -5,66 +5,62 @@ const WorkGallery: React.FC<{
   items: WorkItem[];
   aspectClass?: string;
   gridClassName?: string;
-  sectionClassName?: string;
+  cardClassName?: string;
+  overlayClassName?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
 }> = ({
   items,
   aspectClass = 'aspect-[4/3]',
-  gridClassName = 'grid gap-6 md:gap-8 grid-cols-1 px-4 md:px-8 max-w-6xl mx-auto',
-  sectionClassName = 'py-12',
+  gridClassName = 'grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto',
+  cardClassName = '',
+  overlayClassName = '',
+  titleClassName = '',
+  descriptionClassName = '',
 }) => {
 
   return (
-    <section className={`w-full ${sectionClassName}`}>
+    <section className="w-full">
       <div className={gridClassName}>
+
         {items.map((item, index) => {
           const itemAspectClass = item.aspectClass ?? aspectClass;
           const fitClass = item.imageFit === 'contain' ? 'object-contain' : 'object-cover';
           const imagePosition = item.imagePosition ?? 'top';
-          const isEven = index % 2 === 1;
-          const hasLink = Boolean(item.link && item.link !== '#');
 
-          return (
-            <article
-              key={item.id}
-              className={`mirror-card group transition-transform duration-300 hover:-translate-y-1 ${hasLink ? 'cursor-pointer' : ''} ${isEven ? 'mirror-card-even' : ''}`}
-              onClick={
-                hasLink
-                  ? () => {
-                      window.open(item.link!, '_blank', 'noopener,noreferrer');
-                    }
-                  : undefined
-              }
+            return (
+              <article
+                key={item.id}
+                className={`relative group overflow-hidden rounded-xl cursor-pointer border border-white/10 bg-black/35 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl ${cardClassName}`}
+                onClick={() => {
+                  if (item.link && item.link !== '#') {
+                    window.open(item.link, '_blank', 'noopener,noreferrer');
+                }
+              }}
             >
-              <div className="mirror-image">
-                <div className={`relative ${itemAspectClass} w-full`}>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className={`absolute inset-0 h-full w-full ${fitClass} transition-transform duration-700 group-hover:scale-105`}
-                    style={{ objectPosition: imagePosition }}
-                    loading={index < 4 ? 'eager' : 'lazy'}
-                    decoding={index < 4 ? 'sync' : 'async'}
-                    fetchPriority={index < 4 ? 'high' : 'auto'}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-                </div>
-              </div>
-              <div className="mirror-body space-y-3">
-                {item.badge && <p className="mirror-caption">{item.badge}</p>}
-                <h3 className="text-white text-xl md:text-2xl font-semibold tracking-wide">
+              {/* Image */}
+              <div className={`relative ${itemAspectClass} overflow-hidden`}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className={`absolute inset-0 h-full w-full ${fitClass} transition-transform duration-700 group-hover:scale-105`}
+                  style={{ objectPosition: imagePosition }}
+                  loading={index < 4 ? 'eager' : 'lazy'}
+                  decoding={index < 4 ? 'sync' : 'async'}
+                  fetchPriority={index < 4 ? 'high' : 'auto'}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className={`absolute inset-0 flex flex-col justify-end p-8 ${overlayClassName}`}>
+                <h3 className={`text-white text-2xl md:text-3xl font-semibold tracking-wide ${titleClassName}`}>
                   {item.title}
                 </h3>
                 {item.description && (
-                  <p className="text-white/70 text-sm md:text-base max-w-sm">
+                  <p className={`mt-2 text-white/80 text-base max-w-sm ${descriptionClassName}`}>
                     {item.description}
                   </p>
                 )}
-                {hasLink && (
-                  <span className="inline-flex items-center gap-2 text-sm text-white/60 group-hover:text-white transition-colors">
-                    View project <span className="text-primary">→</span>
-                  </span>
-                )}
+              </div>
               </div>
             </article>
           );

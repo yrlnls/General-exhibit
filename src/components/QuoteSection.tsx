@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 
 const QuoteSection = () => {
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center">
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center scroll-reveal">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale"
         style={{ backgroundImage: `url(${creativeHero})` }}
       />
-      <div className="absolute inset-0 bg-background/30" />
+      <div className="absolute inset-0 cinema-overlay" />
       
       <div className="relative z-10 text-center px-6">
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-4 hero-text-shadow">
@@ -20,7 +20,7 @@ const QuoteSection = () => {
         <Button
           variant="outline"
           size="lg"
-          className="bg-foreground text-background hover:bg-foreground/90 border-none px-10 py-6 text-base font-medium"
+          className="bg-accent text-accent-foreground hover:bg-accent/90 border-none px-10 py-6 text-base font-medium"
           onClick={() => window.open('https://www.the-star.co.ke/news/realtime/2020-12-11-the-young-can-lead-through-creativity', '_blank')}
         >
           Read More

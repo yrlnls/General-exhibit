@@ -19,23 +19,19 @@ const Travel = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
       <div className="flex-1">
-        <div className="pt-28 pb-12">
-          <div className="container mx-auto px-6 space-y-10">
-            <div className="flex justify-end">
-              <div className="text-right space-y-2">
-                <p className="section-kicker">Places</p>
-                <h1 className="section-heading-right">Travel Stories</h1>
-              </div>
-            </div>
-
-            <div className="mirror-surface">
-              <span className="mirror-title">Places</span>
-              <div className="p-6 md:p-10">
+        <div className="pt-24 pb-16">
+          <div className="container mx-auto px-6">
+            <h1 className="section-heading mb-10">Places</h1>
+            <div className="mirror-panel">
+              <div className="mirror-panel-inner">
                 <WorkGallery
                   items={workItems}
                   aspectClass="aspect-video"
-                  sectionClassName="py-0"
-                  gridClassName="grid gap-6 md:gap-8 grid-cols-1"
+                  gridClassName="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto"
+                  cardClassName="rounded-lg"
+                  overlayClassName="p-5 md:p-6"
+                  titleClassName="text-lg md:text-xl"
+                  descriptionClassName="text-sm"
                 />
               </div>
             </div>

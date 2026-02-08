@@ -47,11 +47,11 @@ const Destination = () => {
           fetchPriority="high"
           decoding="sync"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 cinema-overlay" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <Link
             to="/travel"
-            className="absolute top-6 left-6 flex items-center gap-2 text-white hover:text-primary transition-colors"
+            className="absolute top-6 left-6 flex items-center gap-2 text-white/80 hover:text-accent transition-colors"
           >
             <ArrowLeft size={20} />
             <span>Back</span>
@@ -70,23 +70,25 @@ const Destination = () => {
       <div className="flex-1">
         {/* Videos Section - Centered */}
         {destination.videos && destination.videos.length > 0 && (
-          <div className="py-12 bg-card/50">
+          <div className="py-12">
             <div className="container mx-auto px-6 max-w-4xl">
-              <div className="space-y-8">
-                {destination.videos.map((video, index) => (
-                  <div key={index} className="rounded-xl overflow-hidden bg-card">
-                    <div className="aspect-video">
-                      <iframe
-                        src={video.videoUrl}
-                        title={video.title}
-                        className="w-full h-full"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
+              <div className="mirror-panel">
+                <div className="mirror-panel-inner space-y-6">
+                  {destination.videos.map((video, index) => (
+                    <div key={index} className="rounded-xl overflow-hidden border border-white/10 bg-black/40">
+                      <div className="aspect-video">
+                        <iframe
+                          src={video.videoUrl}
+                          title={video.title}
+                          className="w-full h-full"
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -96,7 +98,11 @@ const Destination = () => {
         {galleryImages.length > 0 && (
           <div className="py-12">
             <div className="container mx-auto px-6">
-              <TravelGallery images={galleryImages} />
+              <div className="mirror-panel">
+                <div className="mirror-panel-inner">
+                  <TravelGallery images={galleryImages} />
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -115,4 +121,3 @@ const Destination = () => {
 };
 
 export default Destination;
-

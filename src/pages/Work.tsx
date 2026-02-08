@@ -12,30 +12,29 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-28 pb-12">
-        <div className="container mx-auto px-6 space-y-10">
-          <div className="flex justify-end">
-            <div className="text-right space-y-2">
-              <p className="section-kicker">Featured Work</p>
-              <h1 className="section-heading-right">Projects & Stories</h1>
-            </div>
-          </div>
-
-          <EventsSection events={events} />
-          <DocumentariesSection documentaries={documentaries} />
-          <ArtSection artworks={artworks} />
-          <NGOWorldSection items={ngoWorldItems} aspectClass="aspect-video" />
-
-          <div className="mirror-surface">
-            <span className="mirror-title">Projects</span>
-            <div className="p-6 md:p-10">
-              <WorkGallery
-                items={workItems}
-                aspectClass="aspect-video"
-                sectionClassName="py-0"
-                gridClassName="grid gap-6 md:gap-8 grid-cols-1"
-              />
-            </div>
+      <div className="pt-24 pb-16">
+        <div className="container mx-auto px-6">
+          <div className="space-y-12">
+            <EventsSection events={events} />
+            <DocumentariesSection documentaries={documentaries} />
+            <ArtSection artworks={artworks} />
+            <NGOWorldSection
+              items={ngoWorldItems}
+              aspectClass="aspect-video"
+              gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto"
+            />
+            <section className="scroll-reveal space-y-6">
+              <h2 className="section-heading mb-8">Projects</h2>
+              <div className="mirror-panel">
+                <div className="mirror-panel-inner">
+                  <WorkGallery
+                    items={workItems}
+                    aspectClass="aspect-video"
+                    gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto"
+                  />
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
