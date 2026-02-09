@@ -55,7 +55,7 @@ const About = () => {
                 <div className="mt-6 grid gap-6 md:grid-cols-2 md:items-stretch">
                   <div className="order-2 md:order-1 space-y-4 text-white/80 leading-relaxed">
                     <p>
-                      Jesse is a self-taught multi-disciplinary creative based in
+                      Jesse is a  multi-disciplinary creative based in
                       Nairobi, Kenya, specializing in filmmaking, photography, and
                       visual art.
                     </p>
