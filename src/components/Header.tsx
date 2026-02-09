@@ -7,6 +7,7 @@ const navItems = [
   { label: "Featured Work", href: "/work" },
   { label: "Places", href: "/travel" },
   { label: "About", href: "/about" },
+  // { label: "Blog", href: "/blog" },
   { label: "Connect", href: "/connect" },
 ];
 
