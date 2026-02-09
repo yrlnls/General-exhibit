@@ -61,7 +61,7 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 items-center">
 
             {/* LEFT */}
-            <div className="flex flex-col items-center md:items-end md:text-right text-center gap-2">
+            <div className="flex flex-col items-center text-center gap-1">
               <img
                 src="/Contactlogo.png"
                 alt="Contact logo"
@@ -69,7 +69,9 @@ const ContactForm = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <p className="mirror-kicker text-2xl md:text-3xl font-semibold  ">Get In Touch</p>
+              <p className="font-heading text-2xl md:text-3xl font-semibold tracking-wide text-white/90">
+                Get In Touch
+              </p>
              
             </div>
 

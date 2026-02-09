@@ -8,17 +8,17 @@ interface Event {
 
 const EventsSection: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
-    <section className="py-16 space-y-8 scroll-reveal">
+    <section className="py-10 space-y-8 scroll-reveal">
       <h2 className="section-heading mb-12">Events</h2>
       
-      <div className="mirror-panel max-w-[368px] mx-auto">
-        <div className="mirror-panel-inner grid gap-6 grid-cols-1 place-items-center max-w-[368px] mx-auto">
+      <div className="mirror-panel max-w-[520px] mx-auto">
+        <div className="mirror-panel-inner grid gap-6 grid-cols-1 place-items-center max-w-[520px] mx-auto">
           {events.map((event) => (
             <div
               key={event.id}
-              className="group relative overflow-hidden rounded-lg w-full sm:max-w-[calc((100%-24px)/2)] lg:max-w-[368px] border border-white/10 bg-black/40 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-lg w-full sm:max-w-[520px] border border-white/10 bg-black/40 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
-              <div className="work-video-media">
+              <div className="events-video-media">
                 <iframe
                   width="100%"
                   height="100%"

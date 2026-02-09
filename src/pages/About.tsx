@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const approachImages = ["/ETH1.jpg", "/ETH2.jpg", "/ETH3.jpg"];
+const approachImages = ["/Discover.jpg","/Create.jpg" , "/Deliver.jpg"];
 
 const workSteps = [
   {
@@ -24,7 +24,7 @@ const About = () => {
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/About%20page.jpg')" }}
     >
-      <div className="absolute inset-0 cinema-overlay" />
+      <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <main className="pt-24 pb-16 flex-1">
@@ -68,6 +68,10 @@ const About = () => {
                       Kids Entertainment, Nairobi Design Week, Mobile Art School
                       in Kenya (MASK), and Ololo Farm Kenya among others.
                     </p>
+                    <p>
+                      Jesse is also part of  <a href="https://strategicagenda.com/the-agenda/network-of-creatives/" target="_blank" className="text-teal-400 underline">The Creative Network </a> at Strategic Agenda UK 
+                      where they tell compelling stories around the world.
+                    </p>
                   </div>
                   <div className="order-1 md:order-2 h-full">
                     <div className="aspect-[4/5] md:aspect-auto md:h-full overflow-hidden rounded-2xl border border-white/10 bg-black/30 shadow-xl shadow-black/20">
@@ -87,8 +91,11 @@ const About = () => {
                 <h2 className="section-heading mb-8">Plan/Approach</h2>
                 <div className="mirror-panel">
                   <div className="mirror-panel-inner grid gap-6 md:grid-cols-3">
-                    {workSteps.map((step, index) => (
-                      <div key={step.title} className="grid gap-4 md:gap-6">
+                    {workSteps.map((step, index) => {
+                      const isDiscoverImage = approachImages[index] === "/Discover.jpg";
+
+                      return (
+                        <div key={step.title} className="grid gap-4 md:gap-6">
                         <article
                           className={`group h-full min-h-[200px] rounded-2xl border border-white/10 bg-black/40 overflow-hidden shadow-xl shadow-black/20 ${
                             index % 2 === 1 ? "md:order-2" : "md:order-1"
@@ -98,7 +105,11 @@ const About = () => {
                             <img
                               src={approachImages[index]}
                               alt={step.title}
-                              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                              className={`absolute inset-0 h-full w-full transition-transform duration-700 ${
+                                isDiscoverImage
+                                  ? "object-contain"
+                                  : "object-cover group-hover:scale-105"
+                              }`}
                               loading="lazy"
                               decoding="async"
                             />
@@ -119,7 +130,8 @@ const About = () => {
                           </p>
                         </article>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </section>

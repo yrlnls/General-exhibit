@@ -11,7 +11,7 @@ const NGOWorldSection: React.FC<{
   gridClassName = 'grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto',
 }) => {
   return (
-    <section className="py-16 space-y-8 scroll-reveal">
+    <section className="py-10 space-y-8 scroll-reveal">
       <h2 className="section-heading mb-12">NGO World</h2>
       
       <div className="mirror-panel max-w-6xl mx-auto">

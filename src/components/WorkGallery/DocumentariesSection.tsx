@@ -3,7 +3,7 @@ import { Documentary } from '@/data/videosData';
 
 const DocumentariesSection: React.FC<{ documentaries: Documentary[] }> = ({ documentaries }) => {
   return (
-    <section className="py-8 space-y-4 scroll-reveal">
+    <section className="py-6 space-y-4 scroll-reveal">
       <h2 className="section-heading mb-12">Documentaries</h2>
       
       <div className="mirror-panel max-w-[760px] mx-auto">

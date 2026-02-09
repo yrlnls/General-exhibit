@@ -14,12 +14,12 @@ const Work = () => {
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/Featured%20work%20background.jpg')" }}
     >
-      <div className="absolute inset-0 cinema-overlay" />
+      <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <div className="pt-24 pb-16 flex-1">
           <div className="container mx-auto px-6">
-            <div className="space-y-12">
+            <div className="space-y-8">
               <EventsSection events={events} />
               <DocumentariesSection documentaries={documentaries} />
               <ArtSection artworks={artworks} />

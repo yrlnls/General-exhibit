@@ -69,7 +69,7 @@ const BiographySection = () => {
                       <h3 className="text-white font-semibold text-lg md:text-xl">
                         {item.title}
                       </h3>
-                      <ul className="mt-3 space-y-2 text-sm md:text-base text-white/70">
+                      <ul className="mt-4 list-disc space-y-2 pl-5 text-sm md:text-base text-white/70 marker:text-white/50">
                         {item.items.map((line) => (
                           <li key={line}>{line}</li>
                         ))}

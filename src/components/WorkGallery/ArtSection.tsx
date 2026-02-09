@@ -16,7 +16,7 @@ const ArtSection: React.FC<{ artworks: Artwork[] }> = ({ artworks }) => {
   };
 
   return (
-    <section className="py-8 space-y-4 scroll-reveal">
+    <section className="py-6 space-y-4 scroll-reveal">
       <h2 className="section-heading mb-12">Art</h2>
       
       <div className="mirror-panel max-w-[760px] mx-auto">

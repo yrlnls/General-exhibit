@@ -20,7 +20,7 @@ const Travel = () => {
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
       style={{ backgroundImage: "url('/Places%20background%20.jpg')" }}
     >
-      <div className="absolute inset-0 cinema-overlay" />
+      <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <div className="flex-1">
