@@ -36,6 +36,8 @@ const Travel = () => {
                     overlayClassName="p-5 md:p-6"
                     titleClassName="text-lg md:text-xl"
                     descriptionClassName="text-sm"
+                    openInNewTab={false}
+                    autoContainPortrait
                   />
                 </div>
               </div>
