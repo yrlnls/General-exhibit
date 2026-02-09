@@ -7,14 +7,14 @@ const NGOWorldSection: React.FC<{
   gridClassName?: string;
 }> = ({
   items,
-  aspectClass = 'aspect-video',
+  aspectClass = 'tile-media',
   gridClassName = 'grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto',
 }) => {
   return (
     <section className="py-16 space-y-8 scroll-reveal">
       <h2 className="section-heading mb-12">NGO World</h2>
       
-      <div className="mirror-panel">
+      <div className="mirror-panel max-w-6xl mx-auto">
         <div className={`mirror-panel-inner ${gridClassName}`}>
           {items.map((item, index) => {
             const itemAspectClass = item.aspectClass ?? aspectClass;
@@ -40,7 +40,7 @@ const NGOWorldSection: React.FC<{
                     loading={index < 4 ? 'eager' : 'lazy'}
                     decoding={index < 4 ? 'sync' : 'async'}
                     fetchPriority={index < 4 ? 'high' : 'auto'}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-end p-8">

@@ -12,7 +12,7 @@ const Travel = () => {
     image: dest.image,
     link: `/travel/${dest.slug}`,
     imagePosition: dest.imagePosition,
-    imageFit: dest.imageFit,
+    imageFit: dest.imageFit ?? 'cover',
   }));
 
   return (
@@ -26,12 +26,12 @@ const Travel = () => {
         <div className="flex-1">
           <div className="pt-24 pb-16">
             <div className="container mx-auto px-6">
-              <div className="mirror-panel">
+              <div className="mirror-panel max-w-[760px] mx-auto">
                 <div className="mirror-panel-inner">
                   <WorkGallery
                     items={workItems}
-                    aspectClass="aspect-video"
-                    gridClassName="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto"
+                    aspectClass="w-full h-[220px] md:h-[230px] lg:h-[240px]"
+                    gridClassName="grid gap-6 grid-cols-1 sm:grid-cols-2 max-w-[760px] mx-auto"
                     cardClassName="rounded-lg"
                     overlayClassName="p-5 md:p-6"
                     titleClassName="text-lg md:text-xl"

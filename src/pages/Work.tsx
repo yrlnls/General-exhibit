@@ -25,17 +25,17 @@ const Work = () => {
               <ArtSection artworks={artworks} />
               <NGOWorldSection
                 items={ngoWorldItems}
-                aspectClass="aspect-video"
-                gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto"
+                aspectClass="work-video-media"
+                gridClassName="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
               />
               <section className="scroll-reveal space-y-6">
                 <h2 className="section-heading mb-8">Projects</h2>
-                <div className="mirror-panel">
+                <div className="mirror-panel max-w-[760px] mx-auto">
                   <div className="mirror-panel-inner">
                     <WorkGallery
                       items={workItems}
-                      aspectClass="aspect-video"
-                      gridClassName="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto"
+                      aspectClass="work-video-media"
+                      gridClassName="grid gap-6 grid-cols-1 sm:grid-cols-2 max-w-[760px] mx-auto"
                     />
                   </div>
                 </div>

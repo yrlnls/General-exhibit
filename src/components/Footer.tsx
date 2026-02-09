@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-1">
             <p className="text-white/60 text-lg">
-              © {currentYear} GE Collective. All rights reserved.
+              © {currentYear} General Exhibit. All rights reserved.
             </p>
             <div className='flex gap-4'>
               <a

@@ -21,7 +21,7 @@ const ClientsSection = () => {
   return (
     <section id="clients" className="py-10 scroll-reveal">
       <div className="container mx-auto px-6">
-        <h2 className="section-heading mb-8">Clients</h2>
+        <h2 className="section-heading mb-8">Our Clients</h2>
         <div className="mirror-panel">
           <div
             className="

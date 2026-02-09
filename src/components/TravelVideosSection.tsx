@@ -13,7 +13,7 @@ const TravelVideosSection: React.FC<{ videos: TravelVideo[] }> = ({ videos }) =>
       <div className="flex flex-col gap-8 px-4 md:px-8 max-w-6xl mx-auto">
         {videos.map((video) => (
           <div key={video.id} className="relative overflow-hidden rounded-lg w-full">
-            <div className="aspect-video w-full">
+            <div className="tile-media">
               <iframe
                 width="100%"
                 height="100%"

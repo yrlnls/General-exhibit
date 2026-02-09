@@ -14,23 +14,25 @@ const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
   return (
     <>
       <section className="relative w-full">
-        <div className="columns-2 md:columns-3 gap-x-3 md:gap-x-4 p-2 md:p-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 p-2 md:p-4">
           {images.map((image, index) => (
             <button
               key={image.id}
               onClick={() => setSelectedImage(image)}
-              className="relative w-full overflow-hidden rounded-lg group cursor-pointer break-inside-avoid mb-3 md:mb-4"
+              className="relative w-full overflow-hidden rounded-lg group cursor-pointer"
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-auto block object-contain group-hover:scale-[1.02] transition-transform duration-300"
-                loading={index < 4 ? "eager" : "lazy"}
-                decoding={index < 4 ? "sync" : "async"}
-                fetchPriority={index < 4 ? "high" : "auto"}
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+              <div className="tile-media">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  loading={index < 4 ? "eager" : "lazy"}
+                  decoding={index < 4 ? "sync" : "async"}
+                  fetchPriority={index < 4 ? "high" : "auto"}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+              </div>
             </button>
           ))}
         </div>

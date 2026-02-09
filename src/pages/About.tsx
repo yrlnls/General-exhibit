@@ -34,10 +34,10 @@ const About = () => {
                 <h2 className="text-center text-xl md:text-2xl font-semibold text-white mb-4">
                   Why We Create
                 </h2>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/80 leading-relaxed text-center">
                   We believe strong stories deserve thoughtful execution.
                 </p>
-                <p className="text-white/80 leading-relaxed mt-4">
+                <p className="text-white/80 leading-relaxed mt-4 text-center">
                   Our work blends visual craft, digital design, and cultural
                   context to create pieces that feel human, intentional, and
                   lasting. Especially stories emerging from Africa and its

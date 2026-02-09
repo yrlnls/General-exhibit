@@ -88,7 +88,7 @@ const Destination = () => {
                   <div className="mirror-panel-inner space-y-6">
                     {destination.videos.map((video, index) => (
                       <div key={index} className="rounded-xl overflow-hidden border border-white/10 bg-black/40">
-                        <div className="aspect-video">
+                        <div className="tile-media">
                           <iframe
                             src={video.videoUrl}
                             title={video.title}

@@ -4,16 +4,29 @@ import { useEffect } from "react";
 
 const HeroSection = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
+    let rafId = 0;
+
+    const updateScroll = () => {
+      rafId = 0;
       document.documentElement.style.setProperty(
         "--hero-scroll",
-        scrollY.toString()
+        window.scrollY.toString()
       );
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(updateScroll);
+    };
+
+    updateScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
   }, []);
 
   return (
@@ -33,7 +46,7 @@ const HeroSection = () => {
       <div className="hero-overlay opacity-50" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-3 max-w-3xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-0 max-w-3xl mx-auto">
         <img
           src={logo}
           alt="Logo"

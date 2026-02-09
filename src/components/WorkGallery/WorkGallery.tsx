@@ -9,14 +9,16 @@ const WorkGallery: React.FC<{
   overlayClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
+  imageClassName?: string;
 }> = ({
   items,
-  aspectClass = 'aspect-[4/3]',
+  aspectClass = 'tile-media',
   gridClassName = 'grid gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 px-8 md:px-16 max-w-8xl mx-auto',
   cardClassName = '',
   overlayClassName = '',
   titleClassName = '',
   descriptionClassName = '',
+  imageClassName,
 }) => {
 
   return (
@@ -27,6 +29,7 @@ const WorkGallery: React.FC<{
           const itemAspectClass = item.aspectClass ?? aspectClass;
           const fitClass = item.imageFit === 'contain' ? 'object-contain' : 'object-cover';
           const imagePosition = item.imagePosition ?? 'top';
+          const baseImageClass = imageClassName ?? 'absolute inset-0 h-full w-full';
 
             return (
               <article
@@ -43,12 +46,12 @@ const WorkGallery: React.FC<{
                 <img
                   src={item.image}
                   alt={item.title}
-                  className={`absolute inset-0 h-full w-full ${fitClass} transition-transform duration-700 group-hover:scale-105`}
+                  className={`${baseImageClass} ${fitClass} transition-transform duration-700 group-hover:scale-105`}
                   style={{ objectPosition: imagePosition }}
                   loading={index < 4 ? 'eager' : 'lazy'}
                   decoding={index < 4 ? 'sync' : 'async'}
                   fetchPriority={index < 4 ? 'high' : 'auto'}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
               <div className={`absolute inset-0 flex flex-col justify-end p-8 ${overlayClassName}`}>
