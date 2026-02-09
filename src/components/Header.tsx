@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <a href="/" className="text-white font-semibold tracking-wider text-sm md:text-base hover:text-accent transition-colors">
-            GE COLLECTIVE
+            General Exhibit
           </a>
 
           {/* Desktop Navigation */}

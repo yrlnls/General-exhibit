@@ -21,7 +21,6 @@ const Travel = () => {
       <div className="flex-1">
         <div className="pt-24 pb-16">
           <div className="container mx-auto px-6">
-            <h1 className="section-heading mb-10">Places</h1>
             <div className="mirror-panel">
               <div className="mirror-panel-inner">
                 <WorkGallery

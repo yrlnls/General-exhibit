@@ -4,7 +4,7 @@ const BiographySection = () => {
       <div className="container mx-auto px-6">
 
         {/* ================= BIOGRAPHY ================= */}
-        <div className="max-w-5xl mx-auto mb-12">
+        {/* <div className="max-w-5xl mx-auto mb-12">
           <h2 className="section-heading mb-8">Biography</h2>
           <div className="mirror-panel">
             <div className="mirror-panel-inner space-y-6 text-white/80 text-base md:text-lg leading-relaxed">
@@ -34,15 +34,15 @@ const BiographySection = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ================= MY WORK ================= */}
-        <div className="max-w-5xl mx-auto mb-12">
+        {/* <div className="max-w-5xl mx-auto mb-12">
           <h2 className="section-heading mb-8">My Work</h2>
           <div className="mirror-panel">
-            <div className="mirror-panel-inner text-white/80 text-base md:text-lg leading-relaxed">
+            <div className="mirror-panel-inner text-white/80 text-base md:text-lg leading-relaxed"> */}
               {/* MOBILE IMAGE */}
-              <div className="block md:hidden mb-6 overflow-hidden rounded-xl shadow-2xl">
+              {/* <div className="block md:hidden mb-6 overflow-hidden rounded-xl shadow-2xl">
                 <img
                   src="/Photo+22-11-2022,+14+35+29.jpg"
                   alt="Jesse filming in the field"
@@ -50,10 +50,10 @@ const BiographySection = () => {
                   loading="lazy"
                   decoding="async"
                 />
-              </div>
+              </div> */}
 
               {/* TEXT + FLOAT IMAGE (DESKTOP) */}
-              <p className="relative">
+              {/* <p className="relative">
                 <span className="hidden md:block float-right ml-8 mb-4 w-[42%] max-h-[320px] overflow-hidden rounded-xl shadow-2xl">
                   <img
                     src="/Photo+22-11-2022,+14+35+29.jpg"
@@ -62,8 +62,8 @@ const BiographySection = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                </span>
-
+                </span> */}
+{/* 
                 With over <strong className="text-white">seven</strong> years of experience, I've contributed
                 to projects for organizations such as UNDRR, UNDP, L'Oreal Paris,
                 Deutsche Welle (DW), The 77 Percent, AGRA, Microsoft ADC, Ulster
@@ -82,7 +82,7 @@ const BiographySection = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ================= WHO WE ARE ================= */}
         <div className="max-w-5xl mx-auto mb-12">

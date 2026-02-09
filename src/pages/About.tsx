@@ -47,7 +47,6 @@ const About = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-12">
-            <h1 className="section-heading mb-0">About</h1>
 
             <section className="rounded-2xl border border-white/10 bg-black/40 p-6 md:p-8 shadow-xl shadow-black/20 scroll-reveal">
               <h2 className="text-center text-xl md:text-2xl font-semibold text-white mb-4">
