@@ -46,7 +46,13 @@ const WorkGallery: React.FC<{
         {items.map((item, index) => {
           const itemAspectClass = item.aspectClass ?? aspectClass;
           const isPortrait = autoContainPortrait && portraitById[String(item.id)];
-          const fitClass = item.imageFit === 'contain' || isPortrait ? 'object-contain' : 'object-cover';
+          const fitClass = item.imageFit
+            ? item.imageFit === 'contain'
+              ? 'object-contain'
+              : 'object-cover'
+            : isPortrait
+              ? 'object-contain'
+              : 'object-cover';
           const imagePosition = item.imagePosition ?? 'top';
           const baseImageClass = imageClassName ?? 'absolute inset-0 h-full w-full';
           const isClickable = Boolean(item.link && item.link !== '#');
