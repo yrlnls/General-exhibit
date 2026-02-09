@@ -55,8 +55,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="w-full py-24 scroll-reveal">
-      <div className="mirror-panel">
+    <section className="w-full max-w-3xl mx-auto scroll-reveal">
+      <div className="mirror-panel relative z-10 backdrop-blur-md">
         <div className="mirror-panel-inner">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 items-center">
 

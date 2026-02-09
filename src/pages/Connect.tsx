@@ -15,8 +15,8 @@ const Connect = () => {
         <Header />
 
         <div className="flex-1 pt-24 pb-12">
-          <div className="container mx-auto px-6">
-            <div className="mt-12">
+          <div className="container mx-auto px-6 h-full">
+            <div className="h-full flex items-center justify-center">
               <ContactForm />
             </div>
           </div>
