@@ -44,7 +44,7 @@ export const travelDestinations: TravelDestination[] = [
     image: '/ZA1.jpg?w=1200&h=600&fit=crop',
     slug: 'zanzibar',
     photos: [
-     '/ZA1.jpg', '/ZA5.jpg', '/ZA6.jpg', '/ZA7.jpg', '/ZA8.jpg',
+      '/ZA5.jpg', '/ZA6.jpg', '/ZA7.jpg', '/ZA8.jpg',
       '/ZA18.jpg', '/ZA14.jpg', '/ZA2.jpg', '/ZA9.jpg', '/ZA10.jpg',
       '/ZA11.jpg', '/ZA12.jpg', '/ZA16.jpg', '/ZA17.jpg', '/ZA19.jpg',
       '/ZA20.jpg', '/ZA4.jpg', '/ZA23.jpg', '/ZA24.jpg', '/ZA25.jpg',
