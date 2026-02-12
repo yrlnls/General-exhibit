@@ -201,6 +201,15 @@ const ContactForm = () => {
             >
               <Youtube size={26} />
             </a>
+               <a
+              href="https://vimeo.com/user124846686"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-[#1AB7EA] transition-colors"
+              aria-label="Vimeo"
+            >
+              <Vimeo size={26} />
+            </a>
             <a
               href="https://www.linkedin.com/in/jesse-otumba-a70606173/"
               target="_blank"
@@ -210,15 +219,7 @@ const ContactForm = () => {
             >
               <Linkedin size={26} />
             </a>
-            <a
-              href="https://vimeo.com/user124846686"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-[#1AB7EA] transition-colors"
-              aria-label="Vimeo"
-            >
-              <Vimeo size={26} />
-            </a>
+         
           </div>
         </div>
       </div>

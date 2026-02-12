@@ -41,20 +41,20 @@ const Footer = () => {
                 <Youtube size={48} />
               </a>
               <a
-                href="https://www.linkedin.com/in/jesse-otumba-a70606173/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#0A66C2] transition-colors"
-              >
-                <Linkedin size={48} />
-              </a>
-              <a
                 href="https://vimeo.com/user124846686"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-[#1AB7EA] transition-colors"
               >
                 <Vimeo size={48} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jesse-otumba-a70606173/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#0A66C2] transition-colors"
+              >
+                <Linkedin size={48} />
               </a>
             </div>
            
