@@ -30,7 +30,7 @@ const Travel = () => {
                 <div className="mirror-panel-inner">
                   <WorkGallery
                     items={workItems}
-                    aspectClass="w-full h-[220px] md:h-[230px] lg:h-[240px]"
+                    aspectClass="w-full aspect-[4/3]"
                     gridClassName="grid gap-6 grid-cols-1 sm:grid-cols-2 max-w-[760px] mx-auto"
                     cardClassName="rounded-lg"
                     overlayClassName="p-5 md:p-6"
@@ -38,6 +38,7 @@ const Travel = () => {
                     descriptionClassName="text-sm"
                     openInNewTab={false}
                     autoContainPortrait
+                    // useImageAspectRatio
                   />
                 </div>
               </div>

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { FaInstagram as Instagram, FaYoutube as Youtube, FaLinkedin as Linkedin } from 'react-icons/fa';
+import {
+  FaInstagram as Instagram,
+  FaYoutube as Youtube,
+  FaLinkedin as Linkedin,
+  FaVimeoV as Vimeo,
+} from 'react-icons/fa';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -204,6 +209,15 @@ const ContactForm = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={26} />
+            </a>
+            <a
+              href="https://vimeo.com/user124846686"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-[#1AB7EA] transition-colors"
+              aria-label="Vimeo"
+            >
+              <Vimeo size={26} />
             </a>
           </div>
         </div>

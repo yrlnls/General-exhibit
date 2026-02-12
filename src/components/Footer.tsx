@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaInstagram as Instagram, FaYoutube as Youtube, FaLinkedin as Linkedin } from 'react-icons/fa';
+import {
+  FaInstagram as Instagram,
+  FaYoutube as Youtube,
+  FaLinkedin as Linkedin,
+  FaVimeoV as Vimeo,
+} from 'react-icons/fa';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -42,6 +47,14 @@ const Footer = () => {
                 className="text-white hover:text-[#0A66C2] transition-colors"
               >
                 <Linkedin size={48} />
+              </a>
+              <a
+                href="https://vimeo.com/user124846686"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#1AB7EA] transition-colors"
+              >
+                <Vimeo size={48} />
               </a>
             </div>
            
