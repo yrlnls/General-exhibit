@@ -46,11 +46,11 @@ const HeroSection = () => {
       <div className="hero-overlay opacity-50" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content space-y-6 md:space-y-8 max-w-3xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 hero-parallax-content max-w-3xl mx-auto gap-3 md:gap-4">
         <img
           src={logo}
           alt="Logo"
-          className="w-48 md:w-64 lg:w-80 object-contain animate-fade-in mx-auto"
+          className="w-48 md:w-64 lg:w-80 object-contain animate-fade-in mx-auto mt-4 md:mt-6"
           style={{ animationDelay: "0.1s" }}
           loading="eager"
           decoding="async"
