@@ -63,13 +63,13 @@ export const travelDestinations: TravelDestination[] = [
     photos: [
       '/MAD1.jpg', '/MAD3.jpg', '/MAD5.jpg', '/MAD12.JPG', '/MAD13.jpg',
       '/MAD20.jpg', '/MAD21.jpg', '/MAD22.jpg', '/MAD23.jpg', '/MAD24.jpg',
-      '/MAD25.jpg', '/MAD26.jpg', '/MAD37.jpg', '/MAD43.jpg', '/MAD18.jpg',
+      '/MAD25.jpg', '/MAD26.jpg', '/MAD37.jpg', '/MAD43.jpg',
       '/MAD7.jpg', '/MAD8.jpg', '/MAD9.jpg', '/MAD10.jpg', '/MAD11.jpg',
       '/MAD4.jpg', '/MAD36.jpg', '/MAD33.jpg', '/MAD34.jpg', '/MAD35.jpg',
       '/MAD2.jpg', '/MAD6.jpg', '/MAD27.jpg', '/MAD28.jpg', '/MAD29.jpg',
       '/MAD30.jpg', '/MAD31.jpg', '/MAD32.jpg', '/MAD14.jpg', '/MAD15.jpg',
       '/MAD16.jpg', '/MAD17.jpg', '/MAD19.jpg', '/MAD38.jpg', '/MAD39.jpg',
-      '/MAD40.jpg', '/MAD41.jpg', '/MAD42.jpg',
+      '/MAD40.jpg', '/MAD41.jpg', '/MAD42.jpg','/MAD18.jpg',
     ],
     videos: [],
   },
@@ -81,8 +81,8 @@ export const travelDestinations: TravelDestination[] = [
     slug: 'seychelles',
     photos: [
       '/SEY1.jpg', '/SEY2.jpg', '/SEY3.jpg', '/SEY4.jpg', '/SEY5.jpg',
-      '/SEY6.jpg', '/SEY7.jpg', '/SEY8.jpg', '/SEY9.jpg', '/SEY10.jpg',
-      '/SEY11.jpg', '/SEY12.jpg', '/SEY13.jpg', '/SEY14.jpg', '/SEY15.jpg',
+      '/SEY6.jpg', '/SEY7.jpg', '/SEY8.jpg', , '/SEY10.jpg',
+      '/SEY11.jpg', '/SEY12.jpg', '/SEY13.jpg', '/SEY14.jpg', '/SEY15.jpg','/SEY9.jpg',
     ],
     videos: [
       { title: 'Seychelles', videoUrl: 'https://www.youtube.com/embed/5b1Nic6BNVc' },
