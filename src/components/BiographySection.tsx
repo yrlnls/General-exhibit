@@ -6,17 +6,17 @@ const stuffWeDoItems = [
       "Commercial & Branded Video",
       "Post-Production & Editing",
     ],
-    image: "/visual production thumb.jpg",
+    image: "/visual production thumb.webp",
   },
   {
     title: "Digital & Design",
     items: ["Web Design & Development", "Graphic Design"],
-    image: "/digital & design thumb.jpg",
+    image: "/digital & design thumb.webp",
   },
   {
     title: "Voice & Language",
     items: ["Voice Overs", "Translation & Localization", "Subtitling & Captions"],
-    image: "/voice & language thumb.jpg",
+    image: "/voice & language thumb.webp",
   },
 ];
 
