@@ -50,7 +50,7 @@ const HeroSection = () => {
         <img
           src={logo}
           alt="Logo"
-          className="w-48 md:w-64 lg:w-80 object-contain animate-fade-in mx-auto mt-4 md:mt-6"
+          className="w-48 md:w-64 lg:w-80 object-contain animate-fade-in -mb-16 md:-mb-20 hero-text-shadow"
           style={{ animationDelay: "0.1s" }}
           loading="eager"
           decoding="async"
