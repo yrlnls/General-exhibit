@@ -3,7 +3,7 @@ import {
   FaInstagram as Instagram,
   FaYoutube as Youtube,
   FaLinkedin as Linkedin,
-  FaVimeoV as Vimeo,
+  FaBehance as Behance,
 } from 'react-icons/fa';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,12 +41,12 @@ const Footer = () => {
                 <Youtube size={48} />
               </a>
               <a
-                href="https://vimeo.com/user124846686"
+                href="https://www.behance.net/jesseotumba"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#1AB7EA] transition-colors"
+                className="text-white hover:text-[#0050FF] transition-colors"
               >
-                <Vimeo size={48} />
+                <Behance size={48} />
               </a>
               <a
                 href="https://www.linkedin.com/in/jesse-otumba-a70606173/"

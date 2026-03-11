@@ -4,8 +4,8 @@ import {
   FaInstagram as Instagram,
   FaYoutube as Youtube,
   FaLinkedin as Linkedin,
-  FaVimeoV as Vimeo,
-} from 'react-icons/fa';
+  FaBehance as Behance,
+} from "react-icons/fa";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -202,13 +202,13 @@ const ContactForm = () => {
               <Youtube size={26} />
             </a>
                <a
-              href="https://vimeo.com/user124846686"
+              href="https://www.behance.net/jesseotumba"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-[#1AB7EA] transition-colors"
-              aria-label="Vimeo"
+              className="text-white/80 hover:text-[#0050FF] transition-colors"
+              aria-label="Behance"
             >
-              <Vimeo size={26} />
+              <Behance size={26} />
             </a>
             <a
               href="https://www.linkedin.com/in/jesse-otumba-a70606173/"
