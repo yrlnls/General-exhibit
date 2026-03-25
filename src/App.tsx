@@ -10,6 +10,7 @@ import Travel from "./pages/Travel";
 import Destination from "./pages/Destination";
 import Connect from "./pages/Connect";
 import About from "./pages/About";
+import RouteTracker from "./RouteTracker";
 // import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <RouteTracker />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work" element={<Work />} />
