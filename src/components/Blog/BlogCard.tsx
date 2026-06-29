@@ -7,7 +7,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
   };
 
   return (
-    <article className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-xl shadow-black/20 flex flex-col">
+    <article className="group h-full min-w-[280px] max-w-[420px] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-xl shadow-black/20 flex flex-col">
       <button
         type="button"
         onClick={openStoryInNewWindow}

@@ -33,7 +33,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <div className="flex flex-wrap justify-center gap-6">
                 {blogPosts.slice(0, 3).map((post) => (
                   <BlogCard key={post.id} post={post} />
                 ))}

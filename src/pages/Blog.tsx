@@ -31,7 +31,7 @@ const Blog = () => {
 
               <section className="scroll-reveal">
                 <h2 className="section-heading mb-8">Latest Stories</h2>
-                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <div className="flex flex-wrap justify-center gap-6">
                   {blogPosts.map((post) => (
                     <BlogCard key={post.id} post={post} />
                   ))}
