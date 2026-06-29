@@ -9,6 +9,7 @@ export interface BlogPost {
   category: string;
   author: string;
   image: string;
+  gallery?: string[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -24,6 +25,15 @@ export const blogPosts: BlogPost[] = [
     category: "Case Study",
     author: "General Exhibit",
     image: "/CORDIO.jpeg",
+    gallery: [
+      "/CORDIO01.jpeg",
+      "/CORDIO02.jpeg",
+      "/CORDIO03.jpeg",
+      "/CORDIO04.jpeg",
+      "/CORDIO05.jpeg",
+      "/CORDIO06.jpeg",
+      "/CORDIO07.jpeg",
+    ],
   },
   {
     id: "story-02",
@@ -37,6 +47,13 @@ export const blogPosts: BlogPost[] = [
     category: "Travel",
     author: "General Exhibit",
     image: "/ZA1.jpg",
+    gallery: [
+      "/ZA2.jpg",
+      "/ZA3.jpg",
+      "/ZA4.jpg",
+      "/ZA5.jpg",
+      "/ZA6.jpg",
+    ],
   },
   {
     id: "story-03",
@@ -50,6 +67,56 @@ export const blogPosts: BlogPost[] = [
     category: "Photo Essay",
     author: "General Exhibit",
     image: "/MAD2.jpg",
+    gallery: [
+      "/MAD3.jpg",
+      "/MAD4.jpg",
+      "/MAD5.jpg",
+      "/MAD6.jpg",
+      "/MAD7.jpg",
+    ],
   },
+
+  // {
+  //   id: "story-04",
+  //   title: "The Sound of the Sea: A Coastal Reflection",
+  //   excerpt:
+  //     "Listening to the rhythm of waves and the stories they carry, a meditation on the relationship between land and water.",
+  //   content:
+  //     "The sea has a voice that is both constant and ever-changing. Each wave carries a story, shaped by wind, tide, and time. Standing on the shore, I found myself attuned to its rhythm, noticing how it mirrored the ebb and flow of life itself.\n\nIn the quiet moments between waves, I reflected on the communities that live by the coast. Their lives are intertwined with the sea, their traditions shaped by its moods. The sound of the sea is a reminder of resilience, adaptation, and the beauty of living in harmony with nature.\n\nAs I listened, I realized that the sea teaches us patience and presence. It invites us to slow down, to observe, and to appreciate the simple yet profound connection we share with the natural world.",
+  //   // date: "December 15, 2025",
+  //   readTime: "6 min read",
+  //   category: "Essay",
+  //   author: "General Exhibit",
+  //   image: "/SA1.jpg",
+  //   gallery: [
+  //     "/SA2.jpg",
+  //     "/SA3.jpg",
+  //     "/SA4.jpg",
+  //     "/SA5.jpg",
+  //     "/SA6.jpg",
+  //   ],
+  // },
+
+  // {
+  //   id: "story-05",
+  //   title: "Coastal Colors: A Visual Journey",
+  //   excerpt:
+  //     "A photographic exploration of the vibrant hues and textures found along the coastline, capturing the essence of coastal life.",
+  //   content:
+  //     "The coast is a canvas painted with colors that shift with the light and the seasons. From the deep blues of the ocean to the warm tones of sandy beaches, each scene tells a story of place and time.\n\nThrough my lens, I sought to capture the interplay of color and texture that defines coastal landscapes. The weathered wood of piers, the intricate patterns of shells, and the ever-changing sky all contribute to a rich visual tapestry.\n\nThis journey was not just about photography; it was about immersing myself in the environment, observing the subtle details that often go unnoticed, and sharing those moments through images that evoke emotion and connection.",
+  //   // date: "November 30, 2025",
+  //   readTime: "8 min read",
+  //   category: "Photography",
+  //   author: "General Exhibit",
+  //   image: "/SA1.jpg",
+  //   gallery: [
+  //     "/SA2.jpg",
+  //     "/SA3.jpg",
+  //     "/SA4.jpg",
+  //     "/SA5.jpg",
+  //     "/SA6.jpg",
+  //   ],
+  // },
+
 ];
 

@@ -12,7 +12,7 @@ import Connect from "./pages/Connect";
 import About from "./pages/About";
 import RouteTracker from "./RouteTracker";
 import Blog from "./pages/Blog";
-
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +30,7 @@ const App = () => (
           <Route path="/travel/:slug" element={<Destination />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
