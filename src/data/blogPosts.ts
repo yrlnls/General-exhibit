@@ -2,7 +2,6 @@ export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
-  /** Full story content shown when the card is opened */
   content: string;
   // date: string;
   readTime: string;
@@ -24,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     category: "Case Study",
     author: "General Exhibit",
-    image: "/CORDIO.jpeg",
+    image: "/kayaki.jpeg",
     gallery: [
       "/CORDIO01.jpeg",
       "/CORDIO02.jpeg",
@@ -35,46 +34,46 @@ export const blogPosts: BlogPost[] = [
       "/CORDIO07.jpeg",
     ],
   },
-  {
-    id: "story-02",
-    title: "Zanzibar: Textures of the Coast",
-    excerpt:
-      "Salt air, worn wood, and sunlit alleys. A short reflection on craft, movement, and coastal rhythm.",
-    content:
-      "Zanzibar teaches you to look at the surface. Not the obvious view from the water, but the everyday craftsmanship of doors, planks, and painted corners—each one shaped by sun and sea. Salt air settles into materials and makes time visible.\n\nWalking through narrow alleys, I kept encountering textures that felt like they belonged to a hands-on world: rope fibers rough as wire, wood grain glowing under bright shade, and fabric that held the memory of wind. The coastline wasn’t just a destination; it was an instrument, tuning the pace of everyone nearby.\n\nAt markets, motion was constant and gentle. People negotiated with looks, listened with patience, and responded to small details. Even the shadows seemed to move in rhythm—stretching, shortening, repeating like a familiar song.\n\nThese notes are an attempt to translate that rhythm into words: craft as choreography, movement as language, and the coast as a reminder that beauty is built daily.",
-    // date: "January 22, 2026",
-    readTime: "5 min read",
-    category: "Travel",
-    author: "General Exhibit",
-    image: "/ZA1.jpg",
-    gallery: [
-      "/ZA2.jpg",
-      "/ZA3.jpg",
-      "/ZA4.jpg",
-      "/ZA5.jpg",
-      "/ZA6.jpg",
-    ],
-  },
-  {
-    id: "story-03",
-    title: "Madagascar Frames: A Study in Green",
-    excerpt:
-      "Exploring color, patience, and perspective through the rice fields and their slow, steady geometry.",
-    content:
-      "Green in Madagascar is never one thing. It changes with distance—softening into haze far away, brightening in the foreground, then turning darker under the canopy of trees. The landscape invites a patient form of seeing.\n\nIn the rice fields, geometry appeared slowly: terraces guiding the eye, water lines tracing curvature, and narrow paths connecting plots like deliberate punctuation. I kept framing scenes not to capture everything, but to choose what mattered—tone, spacing, and the quiet balance between earth and water.\n\nWhat stood out most was the tempo. Work happened in measured breaths. Fields weren’t rushed; they were tended with a steadiness that made time feel generous. The camera learned to wait.\n\nBy the end of the day, my perspective had shifted. The story wasn’t only about color—it was about the way patience turns observation into understanding.",
-    // date: "January 10, 2026",
-    readTime: "7 min read",
-    category: "Photo Essay",
-    author: "General Exhibit",
-    image: "/MAD2.jpg",
-    gallery: [
-      "/MAD3.jpg",
-      "/MAD4.jpg",
-      "/MAD5.jpg",
-      "/MAD6.jpg",
-      "/MAD7.jpg",
-    ],
-  },
+  // {
+  //   id: "story-02",
+  //   title: "Zanzibar: Textures of the Coast",
+  //   excerpt:
+  //     "Salt air, worn wood, and sunlit alleys. A short reflection on craft, movement, and coastal rhythm.",
+  //   content:
+  //     "Zanzibar teaches you to look at the surface. Not the obvious view from the water, but the everyday craftsmanship of doors, planks, and painted corners—each one shaped by sun and sea. Salt air settles into materials and makes time visible.\n\nWalking through narrow alleys, I kept encountering textures that felt like they belonged to a hands-on world: rope fibers rough as wire, wood grain glowing under bright shade, and fabric that held the memory of wind. The coastline wasn’t just a destination; it was an instrument, tuning the pace of everyone nearby.\n\nAt markets, motion was constant and gentle. People negotiated with looks, listened with patience, and responded to small details. Even the shadows seemed to move in rhythm—stretching, shortening, repeating like a familiar song.\n\nThese notes are an attempt to translate that rhythm into words: craft as choreography, movement as language, and the coast as a reminder that beauty is built daily.",
+  //   // date: "January 22, 2026",
+  //   readTime: "5 min read",
+  //   category: "Travel",
+  //   author: "General Exhibit",
+  //   image: "/ZA1.jpg",
+  //   gallery: [
+  //     "/ZA2.jpg",
+  //     "/ZA3.jpg",
+  //     "/ZA4.jpg",
+  //     "/ZA5.jpg",
+  //     "/ZA6.jpg",
+  //   ],
+  // },
+  // {
+  //   id: "story-03",
+  //   title: "Madagascar Frames: A Study in Green",
+  //   excerpt:
+  //     "Exploring color, patience, and perspective through the rice fields and their slow, steady geometry.",
+  //   content:
+  //     "Green in Madagascar is never one thing. It changes with distance—softening into haze far away, brightening in the foreground, then turning darker under the canopy of trees. The landscape invites a patient form of seeing.\n\nIn the rice fields, geometry appeared slowly: terraces guiding the eye, water lines tracing curvature, and narrow paths connecting plots like deliberate punctuation. I kept framing scenes not to capture everything, but to choose what mattered—tone, spacing, and the quiet balance between earth and water.\n\nWhat stood out most was the tempo. Work happened in measured breaths. Fields weren’t rushed; they were tended with a steadiness that made time feel generous. The camera learned to wait.\n\nBy the end of the day, my perspective had shifted. The story wasn’t only about color—it was about the way patience turns observation into understanding.",
+  //   // date: "January 10, 2026",
+  //   readTime: "7 min read",
+  //   category: "Photo Essay",
+  //   author: "General Exhibit",
+  //   image: "/MAD2.jpg",
+  //   gallery: [
+  //     "/MAD3.jpg",
+  //     "/MAD4.jpg",
+  //     "/MAD5.jpg",
+  //     "/MAD6.jpg",
+  //     "/MAD7.jpg",
+  //   ],
+  // },
 
   // {
   //   id: "story-04",
