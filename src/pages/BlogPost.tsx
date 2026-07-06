@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TravelGallery from "@/components/TravelGallery";
@@ -63,14 +65,15 @@ const BlogPost = () => {
               <div className="space-y-6 p-8 md:p-10">
                 <div className="space-y-3">
                   <p className="text-[11px] uppercase tracking-[0.35em] text-white/60">
-                    {post.category} • {post.readTime}
+                    {/* {post.category} */}
+                     • {post.readTime}
                   </p>
                   <h1 className="text-3xl font-semibold text-white md:text-4xl">{post.title}</h1>
                   <p className="text-base text-white/70">{post.excerpt}</p>
                 </div>
 
-                <div className="space-y-4 whitespace-pre-line text-base leading-8 text-white/80">
-                  {post.content}
+                <div className="prose prose-invert max-w-none">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
                 </div>
               </div>
             </article>
