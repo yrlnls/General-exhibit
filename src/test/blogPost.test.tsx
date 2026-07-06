@@ -13,7 +13,8 @@ describe("Blog post route", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /empowering coastal communities/i })).toBeInTheDocument();
-    expect(screen.getByText(/general exhibit was contracted by cordio east africa/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /general exhibit founder selected for video consortium's ssp africa 2026 fellowship/i })).toBeInTheDocument();
+    expect(screen.getByText(/we're excited to share that jesse otumba/i)).toBeInTheDocument();
+
   });
 });
