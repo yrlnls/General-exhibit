@@ -24,7 +24,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
           <span className="absolute top-4 left-4 text-[11px] uppercase tracking-[0.3em] text-white/80 bg-black/50 px-3 py-1 rounded-full border border-white/10">
-            {post.category}
+            {/* {post.category} */}
           </span>
         </div>
 

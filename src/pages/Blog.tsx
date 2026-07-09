@@ -17,14 +17,12 @@ const Blog = () => {
             <div className="max-w-5xl mx-auto space-y-12">
               <section className="mirror-panel scroll-reveal">
                 <div className="mirror-panel-inner text-center space-y-4">
-                  <p className="mirror-kicker">Journal</p>
+                  <p className="mirror-kicker">THE ARCHIVE</p>
                   <h1 className="text-3xl md:text-4xl font-semibold text-white">
-                    Stories from the Field
+                    Journey Behind the Story
                   </h1>
                   <p className="text-white/70 leading-relaxed max-w-2xl mx-auto">
-                    Short reflections, production notes, and visual essays from
-                    across our projects. The stories below are placeholders for
-                    upcoming releases.
+                   Every project leaves a trail. Discover the journeys, collaborations, and communities shaping our work across the world.
                   </p>
                 </div>
               </section>
