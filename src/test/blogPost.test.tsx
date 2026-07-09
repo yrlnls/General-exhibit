@@ -13,7 +13,7 @@ describe("Blog post route", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /ge production founder selected for video consortium's ssp africa 2026 fellowship/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /GE Productions founder selected for video consortium's ssp africa 2026 fellowship/i })).toBeInTheDocument();
     expect(screen.getByText(/we're excited to share that jesse otumba/i)).toBeInTheDocument();
 
   });

@@ -13,11 +13,11 @@ export const blogPosts: BlogPost[] = [
   {
     id: "story-01",
     title:
-      "GE Production Founder Selected for Video Consortium's SSP Africa 2026 Fellowship",
+      "GE Productions Founder Selected for Video Consortium's SSP Africa 2026 Fellowship",
     excerpt:
-      "GE Production founder and lead filmmaker Jesse Otumba selected for the Video Consortium's SSP Africa 2026 fellowship supported by the Skoll Foundation.",
+      "GE Productions founder and lead filmmaker Jesse Otumba selected for the Video Consortium's SSP Africa 2026 fellowship supported by the Skoll Foundation.",
     content: `
-**We're excited to share that Jesse Otumba**, founder and lead filmmaker at **GE Production**, has been selected as one of 15 filmmakers from across Africa for the Video Consortium's Solutions Storytelling Project (SSP) Africa 2026.
+**We're excited to share that Jesse Otumba**, founder and lead filmmaker at **GE Productions**, has been selected as one of 15 filmmakers from across Africa for the Video Consortium's Solutions Storytelling Project (SSP) Africa 2026.
 
 Supported by the **Skoll Foundation**, the year-long fellowship brings together documentary filmmakers and some of Africa's most innovative social impact organizations to create compelling, solutions-focused films that inspire positive change.
 ![Jesse Otumba](/SSP2.jpeg)
@@ -34,8 +34,8 @@ The Solutions Storytelling Project (**SSP**) is an international fellowship by *
 
 The 2026 African cohort includes filmmakers from Kenya, Ghana, Uganda, Rwanda, South Africa, Zambia, Malawi, Sierra Leone, Côte d'Ivoire, and the Democratic Republic of Congo. Each fellow has been paired with an organization working across sectors including health, education, climate, agriculture, and community development.
 
-### What This Means for GE Production
-At GE Production, we believe powerful storytelling can inspire action. Being selected for SSP Africa reflects our continued commitment to producing documentaries that combine cinematic filmmaking with meaningful social impact. Over the years, we've collaborated with NGOs, development organizations, conservation groups, and international partners to tell authentic stories that create awareness and drive change.
+### What This Means for GE Productions
+At GE Productions, we believe powerful storytelling can inspire action. Being selected for SSP Africa reflects our continued commitment to producing documentaries that combine cinematic filmmaking with meaningful social impact. Over the years, we've collaborated with NGOs, development organizations, conservation groups, and international partners to tell authentic stories that create awareness and drive change.
 
 The fellowship also provides an opportunity to collaborate with an exceptional network of filmmakers, editors, producers, and impact organizations from across the continent while further strengthening our documentary practice.
 
@@ -45,11 +45,11 @@ Production begins this year, with the documentary expected to be completed as pa
 We're grateful to **Video Consortium**, the **Skoll Foundation**, the programme directors, and **Food4Education** for this opportunity, and we look forward to sharing updates from the journey.
 
 ### Need a documentary that creates impact?
-GE Production partners with NGOs, foundations, development agencies, and purpose-driven organizations to create cinematic documentaries that connect audiences with meaningful stories.
+GE Productions partners with NGOs, foundations, development agencies, and purpose-driven organizations to create cinematic documentaries that connect audiences with meaningful stories.
 
 ## Let's tell your story.`,
     readTime: "7 min read",
-    author: "GE Production",
+    author: "GE Productions",
     image: "/SSP1.jpeg",
   },
 
@@ -57,13 +57,13 @@ GE Production partners with NGOs, foundations, development agencies, and purpose
     id: "story-02",
     title: "Empowering Coastal Communities Through Digital Tourism Platforms",
     excerpt:
-      "CORDIO East Africa and GE Production delivered community-led websites and training to support long-term, locally owned Blue Tourism in Kenya’s South Coast.",
+      "CORDIO East Africa and GE Productions delivered community-led websites and training to support long-term, locally owned Blue Tourism in Kenya’s South Coast.",
     content: `**Client: CORDIO East Africa**
 
 **Services: Website Design • WordPress Development • Digital Training • Technical Support**
 
 ### Building Digital Tools for Community-Led Conservation
-GE Production was contracted by CORDIO East Africa to design and deliver digital platforms and capacity-building training for community organizations participating in the Blue Tourism Initiative (BTI) along Kenya’s South Coast.
+GE Productions was contracted by CORDIO East Africa to design and deliver digital platforms and capacity-building training for community organizations participating in the Blue Tourism Initiative (BTI) along Kenya’s South Coast.
 
 Our role extended beyond website development—we helped equip local communities with the knowledge and confidence to manage their own digital presence long after the project concludes.
 
@@ -75,7 +75,7 @@ A community-led organization dedicated to conserving the Kaya Kinondo Sacred For
 A community organization promoting responsible marine tourism around Chale Island. Their work focuses on protecting coral reefs and coastal ecosystems while creating sustainable livelihood opportunities through eco-tourism and visitor education.
 
 ### Our Contribution
-GE Production designed and launched two tourism websites that enable the communities to showcase their destinations, conservation work, and visitor experiences.
+GE Productions designed and launched two tourism websites that enable the communities to showcase their destinations, conservation work, and visitor experiences.
 
 - www.kayakinondotrails.com
 - www.chaleadventures.com
@@ -97,9 +97,9 @@ Digital sustainability is about more than building websites—it is about transf
 As the Diani–Shimoni pilot of the Blue Tourism Initiative concludes, these digital platforms will continue serving as tools for conservation, education, and community-driven tourism in Kenya’s coastal region.
 
 Looking to build digital platforms that create lasting impact?
-Whether you’re an NGO, conservation programme, social enterprise, or community organization, GE Production develops websites and digital experiences designed for long-term sustainability and local ownership.`,
+Whether you’re an NGO, conservation programme, social enterprise, or community organization, GE Productions develops websites and digital experiences designed for long-term sustainability and local ownership.`,
     readTime: "7 min read",
-    author: "GE Production",
+    author: "GE Productions",
     image: "/kayaki.jpeg",
     gallery: [
       "/CORDIO01.jpeg",

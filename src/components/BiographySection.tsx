@@ -30,7 +30,7 @@ const BiographySection = () => {
           <h2 className="section-heading mb-8">Who We Are</h2>
           <div className="mirror-panel">
             <div className="mirror-panel-inner text-white/80 text-base md:text-lg leading-relaxed">
-            GE Production is led by Jesse and supported by a network of collaborators across film, design, photography, voice, and language.
+            GE Productions is led by Jesse and supported by a network of collaborators across film, design, photography, voice, and language.
             We curate layered experiences across visual and digital media for brands, creators and organizations.
             </div>
           </div>
