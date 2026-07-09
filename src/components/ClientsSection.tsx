@@ -1,5 +1,5 @@
 const clients = [
-  { name: "Akuna Wallet", logo: "AKUNA.png" },
+  { name: "Clasp", logo: "CLASP.png" },
   { name: "LG", logo: "LG.png" },
   { name: "L'Oréal Paris", logo: "lOrealParis.png" },
   { name: "Adidas", logo: "ADIDAS.png" },
