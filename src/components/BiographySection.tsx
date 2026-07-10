@@ -1,3 +1,5 @@
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
+
 const stuffWeDoItems = [
   {
     title: "Visual Production",
@@ -6,17 +8,17 @@ const stuffWeDoItems = [
       "Commercial & Branded Video",
       "Post-Production & Editing",
     ],
-    image: "/visual production thumb.webp",
+    image: getCloudinaryAssetUrl("/visual-production-thumb.webp"),
   },
   {
     title: "Digital & Design",
     items: ["Web Design & Development", "Graphic Design"],
-    image: "/digital & design thumb.webp",
+    image: getCloudinaryAssetUrl("/digital-and-design-thumb.webp"),
   },
   {
     title: "Voice & Language",
     items: ["Voice Overs", "Translation & Localization", "Subtitling & Captions"],
-    image: "/voice & language thumb.webp",
+    image: getCloudinaryAssetUrl("/voice-language-thumb.webp"),
   },
 ];
 

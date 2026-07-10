@@ -1,3 +1,5 @@
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -50,7 +52,7 @@ GE Productions partners with NGOs, foundations, development agencies, and purpos
 ## Let's tell your story.`,
     readTime: "7 min read",
     author: "GE Productions",
-    image: "/SSP1.jpeg",
+    image: getCloudinaryAssetUrl("/SSP1.jpeg"),
   },
 
   {
@@ -100,15 +102,15 @@ Looking to build digital platforms that create lasting impact?
 Whether you’re an NGO, conservation programme, social enterprise, or community organization, GE Productions develops websites and digital experiences designed for long-term sustainability and local ownership.`,
     readTime: "7 min read",
     author: "GE Productions",
-    image: "/kayaki.jpeg",
+    image: getCloudinaryAssetUrl("/kayaki.jpeg"),
     gallery: [
-      "/CORDIO01.jpeg",
-      "/CORDIO02.jpeg",
-      "/CORDIO03.jpeg",
-      "/CORDIO04.jpeg",
-      "/CORDIO05.jpeg",
-      "/CORDIO06.jpeg",
-      "/CORDIO07.jpeg",
+      getCloudinaryAssetUrl("/CORDIO01.jpeg"),
+      getCloudinaryAssetUrl("/CORDIO02.jpeg"),
+      getCloudinaryAssetUrl("/CORDIO03.jpeg"),
+      getCloudinaryAssetUrl("/CORDIO04.jpeg"),
+      getCloudinaryAssetUrl("/CORDIO05.jpeg"),
+      getCloudinaryAssetUrl("/CORDIO06.jpeg"),
+      getCloudinaryAssetUrl("/CORDIO07.jpeg"),
     ],
   },
 ];

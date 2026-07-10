@@ -3,6 +3,7 @@ import WorkGallery from "@/components/WorkGallery/WorkGallery";
 import Footer from "@/components/Footer";
 import { travelDestinations } from "@/data/travelDestinations";
 import { WorkItem } from "@/data/workItems";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
 const Travel = () => {
   const workItems: WorkItem[] = travelDestinations.map(dest => ({
@@ -18,7 +19,7 @@ const Travel = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
-      style={{ backgroundImage: "url('/Places%20background%20.jpg')" }}
+      style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/Places background .jpg")}')` }}
     >
       <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">

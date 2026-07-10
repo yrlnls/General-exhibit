@@ -7,12 +7,13 @@ import ArtSection from "@/components/WorkGallery/ArtSection";
 import Footer from "@/components/Footer";
 import { ngoWorldItems, workItems } from "@/data/workItems";
 import { events, documentaries, artworks } from "@/data/videosData";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
 const Work = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Featured%20work%20background.jpg')" }}
+      style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/Featured work background.jpg")}')` }}
     >
       <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">

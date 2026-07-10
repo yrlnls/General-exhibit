@@ -1,7 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
-const approachImages = ["/Discover.jpg","/Create.jpg" , "/Deliver.jpg"];
+const approachImages = [
+  getCloudinaryAssetUrl("/Discover.jpg"),
+  getCloudinaryAssetUrl("/Create.jpg"),
+  getCloudinaryAssetUrl("/Deliver.jpg"),
+];
 
 const workSteps = [
   {
@@ -22,7 +27,7 @@ const About = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/About%20page.jpg')" }}
+      style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/About page.jpg")}')` }}
     >
       <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">
@@ -76,7 +81,7 @@ const About = () => {
                   <div className="order-1 md:order-2 h-full">
                     <div className="aspect-[4/5] md:aspect-auto md:h-full overflow-hidden rounded-2xl border border-white/10 bg-black/30 shadow-xl shadow-black/20">
                       <img
-                        src="/Jesse.jpg"
+                        src={getCloudinaryAssetUrl("/Jesse.jpg")}
                         alt="Jesse Otumba"
                         className="h-full w-full object-cover"
                         loading="lazy"

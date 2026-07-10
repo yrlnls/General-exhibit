@@ -5,11 +5,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import TravelGallery from '@/components/TravelGallery';
 import { ArrowLeft, MapPin } from 'lucide-react';
+import { getCloudinaryAssetUrl } from '@/lib/cloudinary';
 
 const Destination = () => {
   const { slug } = useParams();
   const destination = travelDestinations.find((dest) => dest.slug === slug);
-  const backgroundImage = "url('/Places%20background%20.jpg')";
+  const backgroundImage = `url('${getCloudinaryAssetUrl("/Places background .jpg")}')`;
 
   if (!destination) {
     return (

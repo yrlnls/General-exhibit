@@ -4,6 +4,8 @@ export interface Event {
   videoId: string;
 }
 
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
+
 export interface Documentary {
   id: string;
   title: string;
@@ -47,7 +49,7 @@ export const documentaries: Documentary[] = [
     id: 'ololo-farm',
     title: 'Ololo Farm',
     link: 'https://www.ololofarm.com/',
-    image: '/OLOLO-thumb.jpeg',
+    image: getCloudinaryAssetUrl('/OLOLO-thumb.jpeg'),
   },
 ];
 

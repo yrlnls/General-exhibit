@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TravelGallery from "@/components/TravelGallery";
 import { blogPosts } from "@/data/blogPosts";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
@@ -49,7 +50,7 @@ const BlogPost = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/background.jpg')" }}
+      style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/background.jpg")}')` }}
     >
       <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">
@@ -61,7 +62,7 @@ const BlogPost = () => {
             </Link>
 
             <article className="mt-8 overflow-hidden rounded-[2rem] border border-white/10 bg-black/45 shadow-2xl shadow-black/30">
-              <img src={post.image} alt={post.title} className="h-72 w-full object-cover" />
+              <img src={getCloudinaryAssetUrl(post.image)} alt={post.title} className="h-72 w-full object-cover" />
               <div className="space-y-6 p-8 md:p-10">
                 <div className="space-y-3">
                   <p className="text-[11px] uppercase tracking-[0.35em] text-white/60">

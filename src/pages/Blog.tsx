@@ -2,12 +2,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/Blog/BlogCard";
 import { blogPosts } from "@/data/blogPosts";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
 const Blog = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/background.jpg')" }}
+      style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/background.jpg")}')` }}
     >
       <div className="absolute inset-0 cinema-overlay-soft" />
       <div className="relative z-10 min-h-screen flex flex-col">
