@@ -1,11 +1,12 @@
 import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
 const Connect = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
-      style={{ backgroundImage: "url('/Contact-bg1.jpeg')" }}
+      style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/Contact-bg1.jpeg")}')` }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 cinema-overlay z-0"></div>

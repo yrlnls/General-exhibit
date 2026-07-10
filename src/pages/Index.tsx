@@ -5,6 +5,7 @@ import ClientsSection from "@/components/ClientsSection";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/Blog/BlogCard";
 import { blogPosts } from "@/data/blogPosts";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
 
 const Index = () => {
   return (
@@ -13,7 +14,7 @@ const Index = () => {
       <HeroSection />
       <div
         className="min-h-screen bg-cover bg-fixed bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(/background.jpg)` }}
+        style={{ backgroundImage: `url('${getCloudinaryAssetUrl("/background.jpg")}')` }}
       >
         <div className="absolute inset-0 cinema-overlay" />
         <div className="relative z-10">

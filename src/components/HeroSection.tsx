@@ -1,6 +1,8 @@
-import logo from "/Contactlogo.png";
-import heroImage from "/ABOUT.png";
 import { useEffect } from "react";
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
+
+const heroImage = getCloudinaryAssetUrl("/ABOUT.png");
+const logo = getCloudinaryAssetUrl("/Contactlogo.png");
 
 const HeroSection = () => {
   useEffect(() => {

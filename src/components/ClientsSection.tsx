@@ -1,3 +1,5 @@
+import { getCloudinaryAssetUrl } from "@/lib/cloudinary";
+
 const clients = [
   { name: "Clasp", logo: "CLASP.png" },
   { name: "LG", logo: "LG.png" },
@@ -53,7 +55,7 @@ const ClientsSection = () => {
                 "
               >
                 <img
-                  src={`/${client.logo}`}
+                  src={getCloudinaryAssetUrl(`/${client.logo}`)}
                   alt={client.name}
                   loading="lazy"
                   decoding="async"

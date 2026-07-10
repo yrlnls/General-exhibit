@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { getCloudinaryAssetUrl } from '@/lib/cloudinary';
 import {
   FaInstagram as Instagram,
   FaYoutube as Youtube,
@@ -68,7 +69,7 @@ const ContactForm = () => {
             {/* LEFT */}
             <div className="flex flex-col items-center text-center gap-1">
               <img
-                src="/Contactlogo.png"
+                src={getCloudinaryAssetUrl("/Contactlogo.png")}
                 alt="Contact logo"
                 className="w-36 h-36 md:w-44 md:h-44 object-contain"
                 loading="lazy"
