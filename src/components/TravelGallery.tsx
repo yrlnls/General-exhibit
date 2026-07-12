@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface GalleryImage {
   id: string;
@@ -8,13 +9,13 @@ interface GalleryImage {
   alt: string;
 }
 
-const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
+const TravelGallery: React.FC<{ images: GalleryImage[]; className?: string }> = ({ images, className }) => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   return (
     <>
       <section className="relative w-full">
-        <div className="masonry-gallery columns-1 sm:columns-2 lg:columns-3 p-2 md:p-4">
+        <div className={cn('masonry-gallery columns-1 sm:columns-2 md:columns-2 lg:columns-2 xl:columns-2 p-2 md:p-4', className)}>
           {images.map((image, index) => (
             <button
               key={image.id}
@@ -28,7 +29,7 @@ const TravelGallery: React.FC<{ images: GalleryImage[] }> = ({ images }) => {
                 loading={index < 4 ? "eager" : "lazy"}
                 decoding={index < 4 ? "sync" : "async"}
                 fetchPriority={index < 4 ? "high" : "auto"}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 50vw"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
             </button>
