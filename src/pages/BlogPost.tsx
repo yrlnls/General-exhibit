@@ -89,7 +89,7 @@ const BlogPost = () => {
                         {galleryImages.length} images
                       </p>
                     </div>
-                    <TravelGallery images={galleryImages} />
+                    <TravelGallery images={galleryImages} className="lg:columns-2 xl:columns-3" />
                   </div>
                 </div>
               </section>
