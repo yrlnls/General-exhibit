@@ -15,12 +15,12 @@ const TravelGallery: React.FC<{ images: GalleryImage[]; className?: string }> = 
   return (
     <>
       <section className="relative w-full">
-        <div className={cn('masonry-gallery columns-1 sm:columns-2 md:columns-2 lg:columns-2 xl:columns-2 p-2 md:p-4', className)}>
+        <div className={cn('grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 p-2 md:p-4', className)}>
           {images.map((image, index) => (
             <button
               key={image.id}
               onClick={() => setSelectedImage(image)}
-              className="masonry-item relative w-full overflow-hidden rounded-lg group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+              className="relative w-full overflow-hidden rounded-lg group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
             >
               <img
                 src={image.src}
