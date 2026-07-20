@@ -15,6 +15,58 @@ export const blogPosts: BlogPost[] = [
   {
     id: "story-01",
     title:
+      "GE Productions Selected to Lead Post-Production for CLASP's PURE Demonstrator Films",
+    excerpt:
+      "GE Productions has been engaged by CLASP to provide creative story development and post-production services for a series of three documentary-style films under the PURE (Productive Uses of Renewable Energy) initiative.",
+    content: `**Client: CLASP**
+
+**Services: Creative Story Development • Video Editing • Post-Production • Motion Graphics**
+
+### Crafting Stories That Accelerate Clean Energy Adoption
+
+GE Productions has been engaged by **CLASP** to provide creative story development and post-production services for a series of three documentary-style films under the **PURE (Productive Uses of Renewable Energy)** initiative.
+
+The films are designed to showcase how renewable energy technologies are improving livelihoods, supporting local businesses, and driving sustainable economic development across communities.
+
+### Our Role
+
+As the creative post-production partner, GE Productions is responsible for transforming field footage into compelling visual narratives that communicate both the human stories and the broader impact of the PURE programme.
+
+Our work includes:
+
+- Reviewing and organizing production footage
+- Developing story structure and narrative flow
+- Script refinement and editorial storytelling
+- Editing three demonstrator films
+- Motion graphics and animated visual elements
+- Subtitles and accessibility enhancements
+- Platform-specific exports for digital distribution
+- Collaborative review and revision process
+
+Rather than simply documenting projects, our approach focuses on creating films that connect audiences with the people, challenges, and solutions behind the technology.
+
+### Storytelling for Impact
+
+At **GE Productions**, we believe that effective communication is essential to driving meaningful change. Every frame, edit, and narrative decision is designed to make complex ideas accessible, engaging, and memorable.
+
+Working with CLASP provides an opportunity to contribute to a growing body of visual storytelling that demonstrates how clean energy solutions can create lasting social and economic impact.
+
+### Looking Ahead
+
+The project is currently in post-production, with the films being developed through a collaborative editorial process to ensure they communicate the programme's vision with clarity, authenticity, and cinematic quality.
+
+We look forward to sharing the completed films once they are publicly released.
+
+### Need an experienced post-production partner?
+
+We collaborate with NGOs, development organizations, foundations, and purpose-driven brands to create documentary films, campaign videos, and visual stories that inspire action and deliver measurable impact.`,
+    readTime: "5 min read",
+    author: "GE Productions",
+    image: getCloudinaryAssetUrl("/clasp_thumbnail_template_vbgbz1.jpg"),
+  },
+  {
+    id: "story-02",
+    title:
       "GE Productions Founder Selected for Video Consortium's SSP Africa 2026 Fellowship",
     excerpt:
       "GE Productions founder and lead filmmaker Jesse Otumba selected for the Video Consortium's SSP Africa 2026 fellowship supported by the Skoll Foundation.",
@@ -56,7 +108,7 @@ GE Productions partners with NGOs, foundations, development agencies, and purpos
   },
 
   {
-    id: "story-02",
+    id: "story-03",
     title: "Empowering Coastal Communities Through Digital Tourism Platforms",
     excerpt:
       "CORDIO East Africa and GE Productions delivered community-led websites and training to support long-term, locally owned Blue Tourism in Kenya’s South Coast.",
