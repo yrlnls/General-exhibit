@@ -83,13 +83,16 @@ const BlogPost = () => {
               <section className="mt-10">
                 <div className="mirror-panel">
                   <div className="mirror-panel-inner">
-                    <div className="mb-6 flex items-center justify-between">
+                            <div className="mb-6 flex items-center justify-between">
                       <h2 className="section-heading text-white">Photo story</h2>
                       <p className="text-sm uppercase tracking-[0.3em] text-white/60">
                         {galleryImages.length} images
                       </p>
                     </div>
-                    <TravelGallery images={galleryImages} className="lg:columns-2 xl:columns-3" />
+                    <TravelGallery
+                      images={galleryImages}
+                      className={post?.id === 'story-03' ? 'story-03-gallery' : 'lg:columns-2 xl:columns-3'}
+                    />
                   </div>
                 </div>
               </section>
