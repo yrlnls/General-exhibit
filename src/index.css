@@ -244,6 +244,11 @@
     width: 100%;
   }
 
+  .masonry-gallery img {
+    width: 100%;
+    display: block;
+  }
+
   .scroll-reveal {
     animation: fade-in 1.1s ease-out both;
   }
