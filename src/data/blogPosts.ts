@@ -62,7 +62,7 @@ We look forward to sharing the completed films once they are publicly released.
 We collaborate with NGOs, development organizations, foundations, and purpose-driven brands to create documentary films, campaign videos, and visual stories that inspire action and deliver measurable impact.`,
     readTime: "5 min read",
     author: "GE Productions",
-    image: getCloudinaryAssetUrl("/clasp_thumbnail_template_vbgbz1.jpg"),
+    image: getCloudinaryAssetUrl("/clasp_thumbnail_template_gg51fw.jpg"),
   },
   {
     id: "story-02",
